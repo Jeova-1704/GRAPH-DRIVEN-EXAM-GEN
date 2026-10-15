@@ -1,0 +1,14 @@
+{
+  "pdf": "matriz_referencia.pdf",
+  "resumo": {
+    "competencia": {
+      "total": 30,
+      "verbatim": 30
+    },
+    "habilidade": {
+      "total": 120,
+      "verbatim": 120
+    }
+  },
+  "divergencias": []
+}

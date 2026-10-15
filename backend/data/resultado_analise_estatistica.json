@@ -1,0 +1,560 @@
+{
+  "contagens_validas_por_condicao": {
+    "com_grafo": 597,
+    "com_fewshot_sem_grafo": 594,
+    "sem_grafo": 597
+  },
+  "indicadores": {
+    "cobertura_lexical": {
+      "nome_indicador": "cobertura_lexical",
+      "normalidade_por_grupo": {
+        "com_grafo": {
+          "estatistica": 0.9260353316051227,
+          "p_valor": 1.4768270397240515e-16,
+          "normal": false
+        },
+        "com_fewshot_sem_grafo": {
+          "estatistica": 0.9020951097649582,
+          "p_valor": 4.717788722359352e-19,
+          "normal": false
+        },
+        "sem_grafo": {
+          "estatistica": 0.8751460833126574,
+          "p_valor": 1.7989335513601946e-21,
+          "normal": false
+        }
+      },
+      "kruskal_wallis": {
+        "estatistica": 30.07346965053874,
+        "p_valor": 2.948689474428887e-07,
+        "significativo": true
+      },
+      "post_hoc": [
+        {
+          "grupo_a": "com_grafo",
+          "grupo_b": "com_fewshot_sem_grafo",
+          "estatistica": 208494.0,
+          "p_valor": 1.1868708818762513e-07,
+          "significativo": true
+        },
+        {
+          "grupo_a": "com_grafo",
+          "grupo_b": "sem_grafo",
+          "estatistica": 200748.5,
+          "p_valor": 0.00014059368152057655,
+          "significativo": true
+        },
+        {
+          "grupo_a": "com_fewshot_sem_grafo",
+          "grupo_b": "sem_grafo",
+          "estatistica": 167955.5,
+          "p_valor": 0.11161868062004121,
+          "significativo": false
+        }
+      ],
+      "descritivas": {
+        "com_grafo": {
+          "n": 597,
+          "media": 0.03591310759946906,
+          "mediana": 0.03260869565217391,
+          "desvio_padrao": 0.03027527971558942
+        },
+        "com_fewshot_sem_grafo": {
+          "n": 594,
+          "media": 0.026461947545756877,
+          "mediana": 0.022857889237199582,
+          "desvio_padrao": 0.024743814287953237
+        },
+        "sem_grafo": {
+          "n": 597,
+          "media": 0.029419236140028802,
+          "mediana": 0.02531645569620253,
+          "desvio_padrao": 0.027734337993877194
+        }
+      }
+    },
+    "especificidade_curricular": {
+      "nome_indicador": "especificidade_curricular",
+      "normalidade_por_grupo": {
+        "com_grafo": {
+          "estatistica": 0.9401445775680735,
+          "p_valor": 9.125256358037344e-15,
+          "normal": false
+        },
+        "com_fewshot_sem_grafo": {
+          "estatistica": 0.9144979762562991,
+          "p_valor": 8.439424160954034e-18,
+          "normal": false
+        },
+        "sem_grafo": {
+          "estatistica": 0.9248217350281567,
+          "p_valor": 1.0640483010606353e-16,
+          "normal": false
+        }
+      },
+      "kruskal_wallis": {
+        "estatistica": 33.8464274311619,
+        "p_valor": 4.470351444079384e-08,
+        "significativo": true
+      },
+      "post_hoc": [
+        {
+          "grupo_a": "com_grafo",
+          "grupo_b": "com_fewshot_sem_grafo",
+          "estatistica": 210198.0,
+          "p_valor": 2.3379442278947966e-08,
+          "significativo": true
+        },
+        {
+          "grupo_a": "com_grafo",
+          "grupo_b": "sem_grafo",
+          "estatistica": 202732.5,
+          "p_valor": 3.439466203007896e-05,
+          "significativo": true
+        },
+        {
+          "grupo_a": "com_fewshot_sem_grafo",
+          "grupo_b": "sem_grafo",
+          "estatistica": 168268.0,
+          "p_valor": 0.12409409497706461,
+          "significativo": false
+        }
+      ],
+      "descritivas": {
+        "com_grafo": {
+          "n": 597,
+          "media": 1.5614958521419964,
+          "mediana": 1.5454545454545452,
+          "desvio_padrao": 1.220077175220969
+        },
+        "com_fewshot_sem_grafo": {
+          "n": 594,
+          "media": 1.1745006375912648,
+          "mediana": 1.1044776119402986,
+          "desvio_padrao": 1.027907726063607
+        },
+        "sem_grafo": {
+          "n": 597,
+          "media": 1.2707025810259767,
+          "mediana": 1.169230769230769,
+          "desvio_padrao": 1.0619983974357812
+        }
+      }
+    },
+    "ttr": {
+      "nome_indicador": "ttr",
+      "normalidade_por_grupo": {
+        "com_grafo": {
+          "estatistica": 0.9209652068455864,
+          "p_valor": 3.8474229777851126e-17,
+          "normal": false
+        },
+        "com_fewshot_sem_grafo": {
+          "estatistica": 0.9159474667352397,
+          "p_valor": 1.2054178019196393e-17,
+          "normal": false
+        },
+        "sem_grafo": {
+          "estatistica": 0.9160239476002813,
+          "p_valor": 1.0994395344608475e-17,
+          "normal": false
+        }
+      },
+      "kruskal_wallis": {
+        "estatistica": 0.23049797260430133,
+        "p_valor": 0.8911442335742608,
+        "significativo": false
+      },
+      "post_hoc": [],
+      "descritivas": {
+        "com_grafo": {
+          "n": 597,
+          "media": 0.8305176939143247,
+          "mediana": 0.8623853211009175,
+          "desvio_padrao": 0.11087829306125759
+        },
+        "com_fewshot_sem_grafo": {
+          "n": 594,
+          "media": 0.8306114585101537,
+          "mediana": 0.8658536585365854,
+          "desvio_padrao": 0.11580139845448151
+        },
+        "sem_grafo": {
+          "n": 597,
+          "media": 0.8305454239464201,
+          "mediana": 0.8658536585365854,
+          "desvio_padrao": 0.11521412557354707
+        }
+      }
+    },
+    "fkgl": {
+      "nome_indicador": "fkgl",
+      "normalidade_por_grupo": {
+        "com_grafo": {
+          "estatistica": 0.9814493829959999,
+          "p_valor": 7.029562404152838e-07,
+          "normal": false
+        },
+        "com_fewshot_sem_grafo": {
+          "estatistica": 0.9844419642683228,
+          "p_valor": 5.775155404001547e-06,
+          "normal": false
+        },
+        "sem_grafo": {
+          "estatistica": 0.9789776912869937,
+          "p_valor": 1.4702552615709892e-07,
+          "normal": false
+        }
+      },
+      "kruskal_wallis": {
+        "estatistica": 12.309021864406938,
+        "p_valor": 0.0021238794524003923,
+        "significativo": true
+      },
+      "post_hoc": [
+        {
+          "grupo_a": "com_grafo",
+          "grupo_b": "com_fewshot_sem_grafo",
+          "estatistica": 196336.5,
+          "p_valor": 0.0013466653454523901,
+          "significativo": true
+        },
+        {
+          "grupo_a": "com_grafo",
+          "grupo_b": "sem_grafo",
+          "estatistica": 195020.5,
+          "p_valor": 0.004764288375666289,
+          "significativo": true
+        },
+        {
+          "grupo_a": "com_fewshot_sem_grafo",
+          "grupo_b": "sem_grafo",
+          "estatistica": 174587.5,
+          "p_valor": 0.6466225257217503,
+          "significativo": false
+        }
+      ],
+      "descritivas": {
+        "com_grafo": {
+          "n": 597,
+          "media": 14.697779105824994,
+          "mediana": 15.134835680751177,
+          "desvio_padrao": 2.7681093232946123
+        },
+        "com_fewshot_sem_grafo": {
+          "n": 594,
+          "media": 14.202823725322201,
+          "mediana": 14.564009370816601,
+          "desvio_padrao": 2.7561353415818473
+        },
+        "sem_grafo": {
+          "n": 597,
+          "media": 14.253454138760219,
+          "mediana": 14.674057971014491,
+          "desvio_padrao": 2.7857252907617025
+        }
+      }
+    },
+    "d1_alinhamento_habilidade": {
+      "nome_indicador": "d1_alinhamento_habilidade",
+      "normalidade_por_grupo": {
+        "com_grafo": {
+          "estatistica": 0.025327923880187685,
+          "p_valor": 1.8646283485760107e-47,
+          "normal": false
+        },
+        "com_fewshot_sem_grafo": {
+          "estatistica": 0.031563171146002184,
+          "p_valor": 2.8694566703018746e-47,
+          "normal": false
+        },
+        "sem_grafo": {
+          "estatistica": 0.02718683843892865,
+          "p_valor": 2.1354387302811704e-47,
+          "normal": false
+        }
+      },
+      "kruskal_wallis": {
+        "estatistica": 9.741754654862987e-06,
+        "p_valor": 0.9999951291345353,
+        "significativo": false
+      },
+      "post_hoc": [],
+      "descritivas": {
+        "com_grafo": {
+          "n": 597,
+          "media": 4.991624790619765,
+          "mediana": 5,
+          "desvio_padrao": 0.16868084689503496
+        },
+        "com_fewshot_sem_grafo": {
+          "n": 594,
+          "media": 4.9966329966329965,
+          "mediana": 5.0,
+          "desvio_padrao": 0.057976938970489354
+        },
+        "sem_grafo": {
+          "n": 596,
+          "media": 4.993288590604027,
+          "mediana": 5.0,
+          "desvio_padrao": 0.1294666133427736
+        }
+      }
+    },
+    "d2_adequacao_objetos_conhecimento": {
+      "nome_indicador": "d2_adequacao_objetos_conhecimento",
+      "normalidade_por_grupo": {
+        "com_grafo": {
+          "estatistica": 0.050940546276899944,
+          "p_valor": 4.73969409312935e-47,
+          "normal": false
+        },
+        "com_fewshot_sem_grafo": {
+          "estatistica": 0.20493054010278416,
+          "p_valor": 2.567069599203888e-44,
+          "normal": false
+        },
+        "sem_grafo": {
+          "estatistica": 0.2125565165488482,
+          "p_valor": 3.118865323041941e-44,
+          "normal": false
+        }
+      },
+      "kruskal_wallis": {
+        "estatistica": 23.739370502627395,
+        "p_valor": 6.999406128359946e-06,
+        "significativo": true
+      },
+      "post_hoc": [
+        {
+          "grupo_a": "com_grafo",
+          "grupo_b": "com_fewshot_sem_grafo",
+          "estatistica": 185406.0,
+          "p_valor": 3.118304312543858e-06,
+          "significativo": true
+        },
+        {
+          "grupo_a": "com_grafo",
+          "grupo_b": "sem_grafo",
+          "estatistica": 186300.5,
+          "p_valor": 1.9315785889246086e-06,
+          "significativo": true
+        },
+        {
+          "grupo_a": "com_fewshot_sem_grafo",
+          "grupo_b": "sem_grafo",
+          "estatistica": 177261.5,
+          "p_valor": 0.9137856629927307,
+          "significativo": false
+        }
+      ],
+      "descritivas": {
+        "com_grafo": {
+          "n": 597,
+          "media": 4.991624790619765,
+          "mediana": 5,
+          "desvio_padrao": 0.10804954705732614
+        },
+        "com_fewshot_sem_grafo": {
+          "n": 594,
+          "media": 4.86026936026936,
+          "mediana": 5.0,
+          "desvio_padrao": 0.6765181626947748
+        },
+        "sem_grafo": {
+          "n": 596,
+          "media": 4.860738255033557,
+          "mediana": 5.0,
+          "desvio_padrao": 0.6603300361065768
+        }
+      }
+    },
+    "d3_plausibilidade_distratores": {
+      "nome_indicador": "d3_plausibilidade_distratores",
+      "normalidade_por_grupo": {
+        "com_grafo": {
+          "estatistica": 0.6732666305707745,
+          "p_valor": 2.640799066569001e-32,
+          "normal": false
+        },
+        "com_fewshot_sem_grafo": {
+          "estatistica": 0.6909076036917019,
+          "p_valor": 1.5124737524935814e-31,
+          "normal": false
+        },
+        "sem_grafo": {
+          "estatistica": 0.684837170906778,
+          "p_valor": 7.81903220248456e-32,
+          "normal": false
+        }
+      },
+      "kruskal_wallis": {
+        "estatistica": 0.3296529278189799,
+        "p_valor": 0.8480408570142938,
+        "significativo": false
+      },
+      "post_hoc": [],
+      "descritivas": {
+        "com_grafo": {
+          "n": 597,
+          "media": 4.5293132328308205,
+          "mediana": 5,
+          "desvio_padrao": 0.6664755271055635
+        },
+        "com_fewshot_sem_grafo": {
+          "n": 594,
+          "media": 4.53030303030303,
+          "mediana": 5.0,
+          "desvio_padrao": 0.6200072695196756
+        },
+        "sem_grafo": {
+          "n": 596,
+          "media": 4.557046979865772,
+          "mediana": 5.0,
+          "desvio_padrao": 0.5841900270504018
+        }
+      }
+    },
+    "d4_nivel_escolaridade": {
+      "nome_indicador": "d4_nivel_escolaridade",
+      "normalidade_por_grupo": {
+        "com_grafo": {
+          "estatistica": 0.1190488835106352,
+          "p_valor": 6.298192878802746e-46,
+          "normal": false
+        },
+        "com_fewshot_sem_grafo": {
+          "estatistica": 0.12947530797160833,
+          "p_valor": 1.1614128162121041e-45,
+          "normal": false
+        },
+        "sem_grafo": {
+          "estatistica": 0.13475357186850598,
+          "p_valor": 1.2518570316838068e-45,
+          "normal": false
+        }
+      },
+      "kruskal_wallis": {
+        "estatistica": 0.6499467820138645,
+        "p_valor": 0.7225465796232073,
+        "significativo": false
+      },
+      "post_hoc": [],
+      "descritivas": {
+        "com_grafo": {
+          "n": 597,
+          "media": 4.97822445561139,
+          "mediana": 5,
+          "desvio_padrao": 0.15713947723904345
+        },
+        "com_fewshot_sem_grafo": {
+          "n": 594,
+          "media": 4.9713804713804715,
+          "mediana": 5.0,
+          "desvio_padrao": 0.1948470581678732
+        },
+        "sem_grafo": {
+          "n": 596,
+          "media": 4.9614093959731544,
+          "mediana": 5.0,
+          "desvio_padrao": 0.25964557648948866
+        }
+      }
+    },
+    "d5_aderencia_formato_enem": {
+      "nome_indicador": "d5_aderencia_formato_enem",
+      "normalidade_por_grupo": {
+        "com_grafo": {
+          "estatistica": 0.18003301129535745,
+          "p_valor": 7.381959155821995e-45,
+          "normal": false
+        },
+        "com_fewshot_sem_grafo": {
+          "estatistica": 0.20433262080031556,
+          "p_valor": 2.5025109684761046e-44,
+          "normal": false
+        },
+        "sem_grafo": {
+          "estatistica": 0.1486788024685829,
+          "p_valor": 2.1858613932857045e-45,
+          "normal": false
+        }
+      },
+      "kruskal_wallis": {
+        "estatistica": 3.248296170530163,
+        "p_valor": 0.1970794986372558,
+        "significativo": false
+      },
+      "post_hoc": [],
+      "descritivas": {
+        "com_grafo": {
+          "n": 597,
+          "media": 4.95142378559464,
+          "mediana": 5,
+          "desvio_padrao": 0.2641666959682836
+        },
+        "com_fewshot_sem_grafo": {
+          "n": 594,
+          "media": 4.941077441077441,
+          "mediana": 5.0,
+          "desvio_padrao": 0.2872727797395284
+        },
+        "sem_grafo": {
+          "n": 596,
+          "media": 4.966442953020135,
+          "mediana": 5.0,
+          "desvio_padrao": 0.20632380140421722
+        }
+      }
+    },
+    "score_medio_judge": {
+      "nome_indicador": "score_medio_judge",
+      "normalidade_por_grupo": {
+        "com_grafo": {
+          "estatistica": 0.5911934102976956,
+          "p_valor": 3.6468124998148697e-35,
+          "normal": false
+        },
+        "com_fewshot_sem_grafo": {
+          "estatistica": 0.6712385717864275,
+          "p_valor": 2.5990125441280824e-32,
+          "normal": false
+        },
+        "sem_grafo": {
+          "estatistica": 0.6045625227529201,
+          "p_valor": 1.0440748479779994e-34,
+          "normal": false
+        }
+      },
+      "kruskal_wallis": {
+        "estatistica": 3.5265673456155757,
+        "p_valor": 0.17148085130506854,
+        "significativo": false
+      },
+      "post_hoc": [],
+      "descritivas": {
+        "com_grafo": {
+          "n": 597,
+          "media": 4.888442211055276,
+          "mediana": 5.0,
+          "desvio_padrao": 0.18009249700357383
+        },
+        "com_fewshot_sem_grafo": {
+          "n": 594,
+          "media": 4.85993265993266,
+          "mediana": 5.0,
+          "desvio_padrao": 0.2088529554713117
+        },
+        "sem_grafo": {
+          "n": 596,
+          "media": 4.867785234899329,
+          "mediana": 5.0,
+          "desvio_padrao": 0.21871080060809484
+        }
+      }
+    }
+  },
+  "indicadores_pulados": {
+    "similaridade_semantica": "dados insuficientes (< 3 observacoes): {'com_grafo': 0, 'com_fewshot_sem_grafo': 0, 'sem_grafo': 0}"
+  }
+}

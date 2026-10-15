@@ -1,0 +1,732 @@
+{
+  "verificacao_recalculo": {
+    "max_dif_C": 0.0,
+    "max_dif_E": 0.0
+  },
+  "indicadores": {
+    "cobertura_lexical": {
+      "n_por_condicao": {
+        "com_grafo": 597,
+        "com_fewshot_sem_grafo": 594,
+        "sem_grafo": 597
+      },
+      "kruskal_wallis": {
+        "H": 30.07346965053874,
+        "p": 2.948689474428887e-07,
+        "epsilon2": 0.015727433977892852,
+        "p_holm": 2.653820526985998e-06,
+        "significativo_holm_0_05": true
+      },
+      "efeitos_pareados": {
+        "com_grafo__vs__com_fewshot_sem_grafo": {
+          "cliffs_delta": 0.1758793969849246,
+          "ic95_cluster_bootstrap": [
+            0.12154479021357979,
+            0.231584299739979
+          ]
+        },
+        "com_grafo__vs__sem_grafo": {
+          "cliffs_delta": 0.12650634523819537,
+          "ic95_cluster_bootstrap": [
+            0.0733390758389161,
+            0.18190147308479582
+          ]
+        },
+        "com_fewshot_sem_grafo__vs__sem_grafo": {
+          "cliffs_delta": -0.052752539352204364,
+          "ic95_cluster_bootstrap": [
+            -0.09949753612129604,
+            -0.01104304371910138
+          ]
+        }
+      },
+      "nivel_habilidade": {
+        "friedman_p": 3.598931443947248e-08,
+        "pareado": {
+          "com_grafo__vs__com_fewshot_sem_grafo": {
+            "p_wilcoxon": 1.34117290739204e-10,
+            "significativo_bonferroni_0_0167": true,
+            "mediana_diferenca": 0.006950139275699336,
+            "habilidades_a_maior": 86,
+            "habilidades_b_maior": 28,
+            "n_habilidades": 120
+          },
+          "com_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 1.1939228069087593e-05,
+            "significativo_bonferroni_0_0167": true,
+            "mediana_diferenca": 0.004485850195251991,
+            "habilidades_a_maior": 73,
+            "habilidades_b_maior": 42,
+            "n_habilidades": 120
+          },
+          "com_fewshot_sem_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.006523640741824494,
+            "significativo_bonferroni_0_0167": true,
+            "mediana_diferenca": -0.0015315174259704495,
+            "habilidades_a_maior": 41,
+            "habilidades_b_maior": 71,
+            "n_habilidades": 120
+          }
+        }
+      }
+    },
+    "especificidade_curricular": {
+      "n_por_condicao": {
+        "com_grafo": 597,
+        "com_fewshot_sem_grafo": 594,
+        "sem_grafo": 597
+      },
+      "kruskal_wallis": {
+        "H": 33.8464274311619,
+        "p": 4.470351444079384e-08,
+        "epsilon2": 0.017841135815776975,
+        "p_holm": 4.470351444079384e-07,
+        "significativo_holm_0_05": true
+      },
+      "efeitos_pareados": {
+        "com_grafo__vs__com_fewshot_sem_grafo": {
+          "cliffs_delta": 0.1854897382535574,
+          "ic95_cluster_bootstrap": [
+            0.13191261681792438,
+            0.24299914229636974
+          ]
+        },
+        "com_grafo__vs__sem_grafo": {
+          "cliffs_delta": 0.13763962189506995,
+          "ic95_cluster_bootstrap": [
+            0.08759456393305942,
+            0.1898690030515989
+          ]
+        },
+        "com_fewshot_sem_grafo__vs__sem_grafo": {
+          "cliffs_delta": -0.05099007946579137,
+          "ic95_cluster_bootstrap": [
+            -0.0905991962214459,
+            -0.009593760632463826
+          ]
+        }
+      },
+      "nivel_habilidade": {
+        "friedman_p": 3.759931188957135e-08,
+        "pareado": {
+          "com_grafo__vs__com_fewshot_sem_grafo": {
+            "p_wilcoxon": 1.2683903488121145e-10,
+            "significativo_bonferroni_0_0167": true,
+            "mediana_diferenca": 0.3048449268502789,
+            "habilidades_a_maior": 85,
+            "habilidades_b_maior": 29,
+            "n_habilidades": 120
+          },
+          "com_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 1.5257848520895656e-07,
+            "significativo_bonferroni_0_0167": true,
+            "mediana_diferenca": 0.26941862750221457,
+            "habilidades_a_maior": 78,
+            "habilidades_b_maior": 37,
+            "n_habilidades": 120
+          },
+          "com_fewshot_sem_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.020205586382862115,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": -0.04833818097419901,
+            "habilidades_a_maior": 46,
+            "habilidades_b_maior": 66,
+            "n_habilidades": 120
+          }
+        }
+      }
+    },
+    "ttr": {
+      "n_por_condicao": {
+        "com_grafo": 597,
+        "com_fewshot_sem_grafo": 594,
+        "sem_grafo": 597
+      },
+      "kruskal_wallis": {
+        "H": 0.23049797260430133,
+        "p": 0.8911442335742608,
+        "epsilon2": -0.000991317662406554,
+        "p_holm": 1.0,
+        "significativo_holm_0_05": false
+      },
+      "efeitos_pareados": {
+        "com_grafo__vs__com_fewshot_sem_grafo": {
+          "cliffs_delta": -0.015757801352441203,
+          "ic95_cluster_bootstrap": [
+            -0.06425870508282885,
+            0.037105703819913814
+          ]
+        },
+        "com_grafo__vs__sem_grafo": {
+          "cliffs_delta": -0.009329169577648178,
+          "ic95_cluster_bootstrap": [
+            -0.06379937974006726,
+            0.04480095930682926
+          ]
+        },
+        "com_fewshot_sem_grafo__vs__sem_grafo": {
+          "cliffs_delta": 0.007213395823111091,
+          "ic95_cluster_bootstrap": [
+            -0.026479798048503245,
+            0.04041847429808523
+          ]
+        }
+      },
+      "nivel_habilidade": {
+        "friedman_p": 0.7918895663367698,
+        "pareado": {
+          "com_grafo__vs__com_fewshot_sem_grafo": {
+            "p_wilcoxon": 0.9436289871659822,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0012892936343660844,
+            "habilidades_a_maior": 64,
+            "habilidades_b_maior": 56,
+            "n_habilidades": 120
+          },
+          "com_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.7652825983567924,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.00023546722725154012,
+            "habilidades_a_maior": 60,
+            "habilidades_b_maior": 60,
+            "n_habilidades": 120
+          },
+          "com_fewshot_sem_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.9248873027316556,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": -0.0008467554844359682,
+            "habilidades_a_maior": 58,
+            "habilidades_b_maior": 62,
+            "n_habilidades": 120
+          }
+        }
+      }
+    },
+    "fkgl": {
+      "n_por_condicao": {
+        "com_grafo": 597,
+        "com_fewshot_sem_grafo": 594,
+        "sem_grafo": 597
+      },
+      "kruskal_wallis": {
+        "H": 12.309021864406938,
+        "p": 0.0021238794524003923,
+        "epsilon2": 0.005775362389023495,
+        "p_holm": 0.014867156166802746,
+        "significativo_holm_0_05": true
+      },
+      "efeitos_pareados": {
+        "com_grafo__vs__com_fewshot_sem_grafo": {
+          "cliffs_delta": 0.10731265756391384,
+          "ic95_cluster_bootstrap": [
+            0.05909362120235457,
+            0.15700223962437912
+          ]
+        },
+        "com_grafo__vs__sem_grafo": {
+          "cliffs_delta": 0.0943634981159287,
+          "ic95_cluster_bootstrap": [
+            0.044606840945454765,
+            0.14334343734020263
+          ]
+        },
+        "com_fewshot_sem_grafo__vs__sem_grafo": {
+          "cliffs_delta": -0.015348910658793402,
+          "ic95_cluster_bootstrap": [
+            -0.05837668764693535,
+            0.029439189245251615
+          ]
+        }
+      },
+      "nivel_habilidade": {
+        "friedman_p": 2.470923905813416e-05,
+        "pareado": {
+          "com_grafo__vs__com_fewshot_sem_grafo": {
+            "p_wilcoxon": 8.714280316997136e-06,
+            "significativo_bonferroni_0_0167": true,
+            "mediana_diferenca": 0.5924550176237764,
+            "habilidades_a_maior": 81,
+            "habilidades_b_maior": 39,
+            "n_habilidades": 120
+          },
+          "com_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.00013871151867058401,
+            "significativo_bonferroni_0_0167": true,
+            "mediana_diferenca": 0.47948909240131776,
+            "habilidades_a_maior": 80,
+            "habilidades_b_maior": 40,
+            "n_habilidades": 120
+          },
+          "com_fewshot_sem_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.5751807268813973,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": -0.09439931636697452,
+            "habilidades_a_maior": 57,
+            "habilidades_b_maior": 63,
+            "n_habilidades": 120
+          }
+        }
+      }
+    },
+    "d1_alinhamento_habilidade": {
+      "n_por_condicao": {
+        "com_grafo": 597,
+        "com_fewshot_sem_grafo": 594,
+        "sem_grafo": 596
+      },
+      "kruskal_wallis": {
+        "H": 9.741754654862987e-06,
+        "p": 0.9999951291345353,
+        "epsilon2": -0.00112107077255905,
+        "p_holm": 1.0,
+        "significativo_holm_0_05": false
+      },
+      "efeitos_pareados": {
+        "com_grafo__vs__com_fewshot_sem_grafo": {
+          "cliffs_delta": 1.1279743272973874e-05,
+          "ic95_cluster_bootstrap": [
+            -0.006700018630238641,
+            0.006711409395973256
+          ]
+        },
+        "com_grafo__vs__sem_grafo": {
+          "cliffs_delta": 2.810472946368492e-06,
+          "ic95_cluster_bootstrap": [
+            -0.006711409395973145,
+            0.006700377461064194
+          ]
+        },
+        "com_fewshot_sem_grafo__vs__sem_grafo": {
+          "cliffs_delta": -5.649334508417425e-06,
+          "ic95_cluster_bootstrap": [
+            -0.005050449692393405,
+            0.005008556624474442
+          ]
+        }
+      },
+      "nivel_habilidade": {
+        "friedman_p": 1.0,
+        "pareado": {
+          "com_grafo__vs__com_fewshot_sem_grafo": {
+            "p_wilcoxon": 0.7054569861112734,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 2,
+            "habilidades_b_maior": 2,
+            "n_habilidades": 120
+          },
+          "com_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.8539232992870668,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 2,
+            "habilidades_b_maior": 2,
+            "n_habilidades": 120
+          },
+          "com_fewshot_sem_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.6547208460185769,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 1,
+            "habilidades_b_maior": 1,
+            "n_habilidades": 120
+          }
+        }
+      }
+    },
+    "d2_adequacao_objetos_conhecimento": {
+      "n_por_condicao": {
+        "com_grafo": 597,
+        "com_fewshot_sem_grafo": 594,
+        "sem_grafo": 596
+      },
+      "kruskal_wallis": {
+        "H": 23.739370502627395,
+        "p": 6.999406128359946e-06,
+        "epsilon2": 0.01218574579743688,
+        "p_holm": 5.599524902687957e-05,
+        "significativo_holm_0_05": true
+      },
+      "efeitos_pareados": {
+        "com_grafo__vs__com_fewshot_sem_grafo": {
+          "cliffs_delta": 0.04566604064091506,
+          "ic95_cluster_bootstrap": [
+            0.016785286239333903,
+            0.08321910328105803
+          ]
+        },
+        "com_grafo__vs__sem_grafo": {
+          "cliffs_delta": 0.047185030296898356,
+          "ic95_cluster_bootstrap": [
+            0.017234552299089014,
+            0.08251766537396497
+          ]
+        },
+        "com_fewshot_sem_grafo__vs__sem_grafo": {
+          "cliffs_delta": 0.0014095089598444854,
+          "ic95_cluster_bootstrap": [
+            -0.01822618083363026,
+            0.021417264945193828
+          ]
+        }
+      },
+      "nivel_habilidade": {
+        "friedman_p": 0.006143825456534524,
+        "pareado": {
+          "com_grafo__vs__com_fewshot_sem_grafo": {
+            "p_wilcoxon": 0.005599339982527989,
+            "significativo_bonferroni_0_0167": true,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 12,
+            "habilidades_b_maior": 2,
+            "n_habilidades": 120
+          },
+          "com_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.002820795071116595,
+            "significativo_bonferroni_0_0167": true,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 13,
+            "habilidades_b_maior": 2,
+            "n_habilidades": 120
+          },
+          "com_fewshot_sem_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.7939648489673692,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 8,
+            "habilidades_b_maior": 9,
+            "n_habilidades": 120
+          }
+        }
+      }
+    },
+    "d3_plausibilidade_distratores": {
+      "n_por_condicao": {
+        "com_grafo": 597,
+        "com_fewshot_sem_grafo": 594,
+        "sem_grafo": 596
+      },
+      "kruskal_wallis": {
+        "H": 0.3296529278189799,
+        "p": 0.8480408570142938,
+        "epsilon2": -0.0009362932018951905,
+        "p_holm": 1.0,
+        "significativo_holm_0_05": false
+      },
+      "efeitos_pareados": {
+        "com_grafo__vs__com_fewshot_sem_grafo": {
+          "cliffs_delta": 0.011541997304141294,
+          "ic95_cluster_bootstrap": [
+            -0.04059345161506801,
+            0.06165140944775241
+          ]
+        },
+        "com_grafo__vs__sem_grafo": {
+          "cliffs_delta": -0.004300023607972769,
+          "ic95_cluster_bootstrap": [
+            -0.06263820908293272,
+            0.0577325588187881
+          ]
+        },
+        "com_fewshot_sem_grafo__vs__sem_grafo": {
+          "cliffs_delta": -0.016128850021467467,
+          "ic95_cluster_bootstrap": [
+            -0.06789466325579982,
+            0.03379890747330302
+          ]
+        }
+      },
+      "nivel_habilidade": {
+        "friedman_p": 0.659373662311816,
+        "pareado": {
+          "com_grafo__vs__com_fewshot_sem_grafo": {
+            "p_wilcoxon": 0.865891700613297,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 53,
+            "habilidades_b_maior": 50,
+            "n_habilidades": 120
+          },
+          "com_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.3038262015294435,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 40,
+            "habilidades_b_maior": 55,
+            "n_habilidades": 120
+          },
+          "com_fewshot_sem_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.46568430884825096,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 49,
+            "habilidades_b_maior": 48,
+            "n_habilidades": 120
+          }
+        }
+      }
+    },
+    "d4_nivel_escolaridade": {
+      "n_por_condicao": {
+        "com_grafo": 597,
+        "com_fewshot_sem_grafo": 594,
+        "sem_grafo": 596
+      },
+      "kruskal_wallis": {
+        "H": 0.6499467820138645,
+        "p": 0.7225465796232073,
+        "epsilon2": -0.0007567562881088205,
+        "p_holm": 1.0,
+        "significativo_holm_0_05": false
+      },
+      "efeitos_pareados": {
+        "com_grafo__vs__com_fewshot_sem_grafo": {
+          "cliffs_delta": 0.005146382868326027,
+          "ic95_cluster_bootstrap": [
+            -0.01011896495529076,
+            0.020563161107243155
+          ]
+        },
+        "com_grafo__vs__sem_grafo": {
+          "cliffs_delta": 0.006874416826863516,
+          "ic95_cluster_bootstrap": [
+            -0.009994366792795795,
+            0.025510814710611562
+          ]
+        },
+        "com_fewshot_sem_grafo__vs__sem_grafo": {
+          "cliffs_delta": 0.0017512936976025184,
+          "ic95_cluster_bootstrap": [
+            -0.013332996674483169,
+            0.017432602746013652
+          ]
+        }
+      },
+      "nivel_habilidade": {
+        "friedman_p": 0.7126893288617064,
+        "pareado": {
+          "com_grafo__vs__com_fewshot_sem_grafo": {
+            "p_wilcoxon": 0.695346124574286,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 8,
+            "habilidades_b_maior": 5,
+            "n_habilidades": 120
+          },
+          "com_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.4918865326788192,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 9,
+            "habilidades_b_maior": 7,
+            "n_habilidades": 120
+          },
+          "com_fewshot_sem_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.27559417099399997,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 8,
+            "habilidades_b_maior": 6,
+            "n_habilidades": 120
+          }
+        }
+      }
+    },
+    "d5_aderencia_formato_enem": {
+      "n_por_condicao": {
+        "com_grafo": 597,
+        "com_fewshot_sem_grafo": 594,
+        "sem_grafo": 596
+      },
+      "kruskal_wallis": {
+        "H": 3.248296170530163,
+        "p": 0.1970794986372558,
+        "epsilon2": 0.0006997175843778941,
+        "p_holm": 1.0,
+        "significativo_holm_0_05": false
+      },
+      "efeitos_pareados": {
+        "com_grafo__vs__com_fewshot_sem_grafo": {
+          "cliffs_delta": 0.01175913236214754,
+          "ic95_cluster_bootstrap": [
+            -0.012199927503717603,
+            0.03687923832309886
+          ]
+        },
+        "com_grafo__vs__sem_grafo": {
+          "cliffs_delta": -0.008501680662821975,
+          "ic95_cluster_bootstrap": [
+            -0.03159005587106666,
+            0.014769491397624634
+          ]
+        },
+        "com_fewshot_sem_grafo__vs__sem_grafo": {
+          "cliffs_delta": -0.02036867557001787,
+          "ic95_cluster_bootstrap": [
+            -0.04566655827613009,
+            0.006178519079677897
+          ]
+        }
+      },
+      "nivel_habilidade": {
+        "friedman_p": 0.17953388682198837,
+        "pareado": {
+          "com_grafo__vs__com_fewshot_sem_grafo": {
+            "p_wilcoxon": 0.6278230271466869,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 18,
+            "habilidades_b_maior": 16,
+            "n_habilidades": 120
+          },
+          "com_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.2594618091802332,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 12,
+            "habilidades_b_maior": 18,
+            "n_habilidades": 120
+          },
+          "com_fewshot_sem_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.08282894315085988,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 9,
+            "habilidades_b_maior": 20,
+            "n_habilidades": 120
+          }
+        }
+      }
+    },
+    "score_medio_judge": {
+      "n_por_condicao": {
+        "com_grafo": 597,
+        "com_fewshot_sem_grafo": 594,
+        "sem_grafo": 596
+      },
+      "kruskal_wallis": {
+        "H": 3.5265673456155757,
+        "p": 0.17148085130506854,
+        "epsilon2": 0.000855699184762094,
+        "p_holm": 1.0,
+        "significativo_holm_0_05": false
+      },
+      "efeitos_pareados": {
+        "com_grafo__vs__com_fewshot_sem_grafo": {
+          "cliffs_delta": 0.055896767789565205,
+          "ic95_cluster_bootstrap": [
+            0.0015253131390023608,
+            0.11044791574953793
+          ]
+        },
+        "com_grafo__vs__sem_grafo": {
+          "cliffs_delta": 0.027888323047002395,
+          "ic95_cluster_bootstrap": [
+            -0.03267089526373983,
+            0.08649324029298061
+          ]
+        },
+        "com_fewshot_sem_grafo__vs__sem_grafo": {
+          "cliffs_delta": -0.027427519038257242,
+          "ic95_cluster_bootstrap": [
+            -0.07446155323200992,
+            0.024624945420521335
+          ]
+        }
+      },
+      "nivel_habilidade": {
+        "friedman_p": 0.4156172848039492,
+        "pareado": {
+          "com_grafo__vs__com_fewshot_sem_grafo": {
+            "p_wilcoxon": 0.06918386346087388,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.040000000000000036,
+            "habilidades_a_maior": 62,
+            "habilidades_b_maior": 46,
+            "n_habilidades": 120
+          },
+          "com_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.4529744728407692,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 48,
+            "habilidades_b_maior": 51,
+            "n_habilidades": 120
+          },
+          "com_fewshot_sem_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.3799075091968439,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": 0.0,
+            "habilidades_a_maior": 45,
+            "habilidades_b_maior": 51,
+            "n_habilidades": 120
+          }
+        }
+      }
+    },
+    "especificidade_sensibilidade_media_simples": {
+      "n_por_condicao": {
+        "com_grafo": 595,
+        "com_fewshot_sem_grafo": 583,
+        "sem_grafo": 594
+      },
+      "kruskal_wallis": {
+        "H": 30.383011555020644,
+        "p": 2.525880900694576e-07,
+        "epsilon2": 0.016044664530820037
+      },
+      "efeitos_pareados": {
+        "com_grafo__vs__com_fewshot_sem_grafo": {
+          "cliffs_delta": 0.17370310045115822,
+          "ic95_cluster_bootstrap": [
+            0.10684895857593997,
+            0.24682117795272837
+          ]
+        },
+        "com_grafo__vs__sem_grafo": {
+          "cliffs_delta": 0.13613728319610674,
+          "ic95_cluster_bootstrap": [
+            0.07633831376664922,
+            0.1993699544984431
+          ]
+        },
+        "com_fewshot_sem_grafo__vs__sem_grafo": {
+          "cliffs_delta": -0.04471819394632426,
+          "ic95_cluster_bootstrap": [
+            -0.09064382629899252,
+            -0.001017602297190052
+          ]
+        }
+      },
+      "nivel_habilidade": {
+        "friedman_p": 1.3368905657596772e-06,
+        "pareado": {
+          "com_grafo__vs__com_fewshot_sem_grafo": {
+            "p_wilcoxon": 3.709424467048328e-06,
+            "significativo_bonferroni_0_0167": true,
+            "mediana_diferenca": 0.47966161394947937,
+            "habilidades_a_maior": 83,
+            "habilidades_b_maior": 31,
+            "n_habilidades": 120
+          },
+          "com_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.0004284126496417923,
+            "significativo_bonferroni_0_0167": true,
+            "mediana_diferenca": 0.37346589918824846,
+            "habilidades_a_maior": 72,
+            "habilidades_b_maior": 43,
+            "n_habilidades": 120
+          },
+          "com_fewshot_sem_grafo__vs__sem_grafo": {
+            "p_wilcoxon": 0.03531154890593081,
+            "significativo_bonferroni_0_0167": false,
+            "mediana_diferenca": -0.1139732931720644,
+            "habilidades_a_maior": 44,
+            "habilidades_b_maior": 68,
+            "n_habilidades": 120
+          }
+        }
+      }
+    }
+  }
+}

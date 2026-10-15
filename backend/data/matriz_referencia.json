@@ -1,0 +1,416 @@
+{
+  "fonte": "INEP/MEC - Matriz de Referencia ENEM (context/matriz_referencia.pdf)",
+  "nota_mapeamento": "Objetos de Conhecimento sao mapeados por competencia (nao por habilidade individual): o anexo da Matriz lista OCs por area, sem associacao explicita a habilidades. Cada Habilidade herda os OCs da sua Competencia. Granularidade dos OCs = cada bloco tematico com titulo em negrito no anexo oficial (nao a explosao em frases atomicas) - decisao de modelagem documentada em modules/matriz_referencia/README.md.",
+  "eixos_cognitivos": [
+    {"codigo": "DL", "nome": "Dominar linguagens", "descricao": "Dominar a norma culta da Lingua Portuguesa e fazer uso das linguagens matematica, artistica e cientifica e das linguas espanhola e inglesa."},
+    {"codigo": "CF", "nome": "Compreender fenomenos", "descricao": "Construir e aplicar conceitos das varias areas do conhecimento para a compreensao de fenomenos naturais, de processos historico-geograficos, da producao tecnologica e das manifestacoes artisticas."},
+    {"codigo": "SP", "nome": "Enfrentar situacoes-problema", "descricao": "Selecionar, organizar, relacionar, interpretar dados e informacoes representados de diferentes formas, para tomar decisoes e enfrentar situacoes-problema."},
+    {"codigo": "CA", "nome": "Construir argumentacao", "descricao": "Relacionar informacoes, representadas em diferentes formas, e conhecimentos disponiveis em situacoes concretas, para construir argumentacao consistente."},
+    {"codigo": "EP", "nome": "Elaborar propostas", "descricao": "Recorrer aos conhecimentos desenvolvidos na escola para elaboracao de propostas de intervencao solidaria na realidade, respeitando os valores humanos e considerando a diversidade sociocultural."}
+  ],
+  "areas": [
+    {
+      "codigo": "LC",
+      "nome": "Linguagens, Codigos e suas Tecnologias",
+      "objetos_conhecimento": [
+        {"codigo": "LC-OC1", "titulo": "Estudo do texto: as sequencias discursivas e os generos textuais no sistema de comunicacao e informacao", "descricao": "Modos de organizacao da composicao textual; atividades de producao escrita e de leitura de textos gerados nas diferentes esferas sociais - publicas e privadas."},
+        {"codigo": "LC-OC2", "titulo": "Estudo das praticas corporais: a linguagem corporal como integradora social e formadora de identidade", "descricao": "Performance corporal e identidades juvenis; possibilidades de vivencia critica e emancipada do lazer; mitos e verdades sobre os corpos masculino e feminino na sociedade atual; exercicio fisico e saude; o corpo e a expressao artistica e cultural; o corpo no mundo dos simbolos e como producao da cultura; praticas corporais e autonomia; condicionamentos e esforcos fisicos; o esporte; a danca; as lutas; os jogos; as brincadeiras."},
+        {"codigo": "LC-OC3", "titulo": "Producao e recepcao de textos artisticos: interpretacao e representacao do mundo para o fortalecimento dos processos de identidade e cidadania", "descricao": "Artes Visuais, Teatro, Musica e Danca: estrutura morfologica, sintatica, o contexto da obra artistica, o contexto da comunidade, as fontes de criacao. Conteudos estruturantes das linguagens artisticas; inclusao, diversidade e multiculturalidade: a valorizacao da pluralidade expressada nas producoes esteticas e artisticas das minorias sociais e dos portadores de necessidades especiais educacionais."},
+        {"codigo": "LC-OC4", "titulo": "Estudo do texto literario: relacoes entre producao literaria e processo social, concepcoes artisticas, procedimentos de construcao e recepcao de textos", "descricao": "Producao literaria e processo social; processos de formacao literaria e de formacao nacional; producao de textos literarios, sua recepcao e a constituicao do patrimonio literario nacional; relacoes entre a dialetica cosmopolitismo/localismo e a producao literaria nacional; elementos de continuidade e ruptura entre os diversos momentos da literatura brasileira; associacoes entre concepcoes artisticas e procedimentos de construcao do texto literario em seus generos (epico/narrativo, lirico e dramatico) e formas diversas; articulacoes entre os recursos expressivos e estruturais do texto literario e o processo social relacionado ao momento de sua producao; representacao literaria: natureza, funcao, organizacao e estrutura do texto literario; relacoes entre literatura, outras artes e outros saberes."},
+        {"codigo": "LC-OC5", "titulo": "Estudo dos aspectos linguisticos em diferentes textos: recursos expressivos da lingua, procedimentos de construcao e recepcao de textos", "descricao": "Organizacao da macroestrutura semantica e a articulacao entre ideias e proposicoes (relacoes logico-semanticas)."},
+        {"codigo": "LC-OC6", "titulo": "Estudo do texto argumentativo, seus generos e recursos linguisticos: argumentacao: tipo, generos e usos em lingua portuguesa", "descricao": "Formas de apresentacao de diferentes pontos de vista; organizacao e progressao textual; papeis sociais e comunicativos dos interlocutores, relacao entre usos e propositos comunicativos, funcao sociocomunicativa do genero, aspectos da dimensao espacotemporal em que se produz o texto."},
+        {"codigo": "LC-OC7", "titulo": "Estudo dos aspectos linguisticos da lingua portuguesa: usos da lingua: norma culta e variacao linguistica", "descricao": "Uso dos recursos linguisticos em relacao ao contexto em que o texto e constituido: elementos de referencia pessoal, temporal, espacial, registro linguistico, grau de formalidade, selecao lexical, tempos e modos verbais; uso dos recursos linguisticos em processo de coesao textual."},
+        {"codigo": "LC-OC8", "titulo": "Estudo dos generos digitais: tecnologia da comunicacao e informacao: impacto e funcao social", "descricao": "O texto literario tipico da cultura de massa: o suporte textual em generos digitais; a caracterizacao dos interlocutores na comunicacao tecnologica; os recursos linguisticos e os generos digitais; a funcao social das novas tecnologias."}
+      ],
+      "competencias": [
+        {
+          "numero": 1,
+          "descricao": "Aplicar as tecnologias da comunicacao e da informacao na escola, no trabalho e em outros contextos relevantes para sua vida.",
+          "objetos_conhecimento": ["LC-OC1", "LC-OC8"],
+          "habilidades": [
+            {"codigo": "LC-H1", "descricao": "Identificar as diferentes linguagens e seus recursos expressivos como elementos de caracterizacao dos sistemas de comunicacao."},
+            {"codigo": "LC-H2", "descricao": "Recorrer aos conhecimentos sobre as linguagens dos sistemas de comunicacao e informacao para resolver problemas sociais."},
+            {"codigo": "LC-H3", "descricao": "Relacionar informacoes geradas nos sistemas de comunicacao e informacao, considerando a funcao social desses sistemas."},
+            {"codigo": "LC-H4", "descricao": "Reconhecer posicoes criticas aos usos sociais que sao feitos das linguagens e dos sistemas de comunicacao e informacao."}
+          ]
+        },
+        {
+          "numero": 2,
+          "descricao": "Conhecer e usar lingua(s) estrangeira(s) moderna(s) como instrumento de acesso a informacoes e a outras culturas e grupos sociais.",
+          "objetos_conhecimento": ["LC-OC5"],
+          "habilidades": [
+            {"codigo": "LC-H5", "descricao": "Associar vocabulos e expressoes de um texto em LEM ao seu tema."},
+            {"codigo": "LC-H6", "descricao": "Utilizar os conhecimentos da LEM e de seus mecanismos como meio de ampliar as possibilidades de acesso a informacoes, tecnologias e culturas."},
+            {"codigo": "LC-H7", "descricao": "Relacionar um texto em LEM, as estruturas linguisticas, sua funcao e seu uso social."},
+            {"codigo": "LC-H8", "descricao": "Reconhecer a importancia da producao cultural em LEM como representacao da diversidade cultural e linguistica."}
+          ]
+        },
+        {
+          "numero": 3,
+          "descricao": "Compreender e usar a linguagem corporal como relevante para a propria vida, integradora social e formadora da identidade.",
+          "objetos_conhecimento": ["LC-OC2"],
+          "habilidades": [
+            {"codigo": "LC-H9", "descricao": "Reconhecer as manifestacoes corporais de movimento como originarias de necessidades cotidianas de um grupo social."},
+            {"codigo": "LC-H10", "descricao": "Reconhecer a necessidade de transformacao de habitos corporais em funcao das necessidades cinestesicas."},
+            {"codigo": "LC-H11", "descricao": "Reconhecer a linguagem corporal como meio de interacao social, considerando os limites de desempenho e as alternativas de adaptacao para diferentes individuos."}
+          ]
+        },
+        {
+          "numero": 4,
+          "descricao": "Compreender a arte como saber cultural e estetico gerador de significacao e integrador da organizacao do mundo e da propria identidade.",
+          "objetos_conhecimento": ["LC-OC3"],
+          "habilidades": [
+            {"codigo": "LC-H12", "descricao": "Reconhecer diferentes funcoes da arte, do trabalho da producao dos artistas em seus meios culturais."},
+            {"codigo": "LC-H13", "descricao": "Analisar as diversas producoes artisticas como meio de explicar diferentes culturas, padroes de beleza e preconceitos."},
+            {"codigo": "LC-H14", "descricao": "Reconhecer o valor da diversidade artistica e das inter-relacoes de elementos que se apresentam nas manifestacoes de varios grupos sociais e etnicos."}
+          ]
+        },
+        {
+          "numero": 5,
+          "descricao": "Analisar, interpretar e aplicar recursos expressivos das linguagens, relacionando textos com seus contextos, mediante a natureza, funcao, organizacao, estrutura das manifestacoes, de acordo com as condicoes de producao e recepcao.",
+          "objetos_conhecimento": ["LC-OC4"],
+          "habilidades": [
+            {"codigo": "LC-H15", "descricao": "Estabelecer relacoes entre o texto literario e o momento de sua producao, situando aspectos do contexto historico, social e politico."},
+            {"codigo": "LC-H16", "descricao": "Relacionar informacoes sobre concepcoes artisticas e procedimentos de construcao do texto literario."},
+            {"codigo": "LC-H17", "descricao": "Reconhecer a presenca de valores sociais e humanos atualizaveis e permanentes no patrimonio literario nacional."}
+          ]
+        },
+        {
+          "numero": 6,
+          "descricao": "Compreender e usar os sistemas simbolicos das diferentes linguagens como meios de organizacao cognitiva da realidade pela constituicao de significados, expressao, comunicacao e informacao.",
+          "objetos_conhecimento": ["LC-OC5", "LC-OC1"],
+          "habilidades": [
+            {"codigo": "LC-H18", "descricao": "Identificar os elementos que concorrem para a progressao tematica e para a organizacao e estruturacao de textos de diferentes generos e tipos."},
+            {"codigo": "LC-H19", "descricao": "Analisar a funcao da linguagem predominante nos textos em situacoes especificas de interlocucao."},
+            {"codigo": "LC-H20", "descricao": "Reconhecer a importancia do patrimonio linguistico para a preservacao da memoria e da identidade nacional."}
+          ]
+        },
+        {
+          "numero": 7,
+          "descricao": "Confrontar opinioes e pontos de vista sobre as diferentes linguagens e suas manifestacoes especificas.",
+          "objetos_conhecimento": ["LC-OC6"],
+          "habilidades": [
+            {"codigo": "LC-H21", "descricao": "Reconhecer em textos de diferentes generos, recursos verbais e nao-verbais utilizados com a finalidade de criar e mudar comportamentos e habitos."},
+            {"codigo": "LC-H22", "descricao": "Relacionar, em diferentes textos, opinioes, temas, assuntos e recursos linguisticos."},
+            {"codigo": "LC-H23", "descricao": "Inferir em um texto quais sao os objetivos de seu produtor e quem e seu publico alvo, pela analise dos procedimentos argumentativos utilizados."},
+            {"codigo": "LC-H24", "descricao": "Reconhecer no texto estrategias argumentativas empregadas para o convencimento do publico, tais como a intimidacao, seducao, comocao, chantagem, entre outras."}
+          ]
+        },
+        {
+          "numero": 8,
+          "descricao": "Compreender e usar a lingua portuguesa como lingua materna, geradora de significacao e integradora da organizacao do mundo e da propria identidade.",
+          "objetos_conhecimento": ["LC-OC7"],
+          "habilidades": [
+            {"codigo": "LC-H25", "descricao": "Identificar, em textos de diferentes generos, as marcas linguisticas que singularizam as variedades linguisticas sociais, regionais e de registro."},
+            {"codigo": "LC-H26", "descricao": "Relacionar as variedades linguisticas a situacoes especificas de uso social."},
+            {"codigo": "LC-H27", "descricao": "Reconhecer os usos da norma padrao da lingua portuguesa nas diferentes situacoes de comunicacao."}
+          ]
+        },
+        {
+          "numero": 9,
+          "descricao": "Entender os principios, a natureza, a funcao e o impacto das tecnologias da comunicacao e da informacao na sua vida pessoal e social, no desenvolvimento do conhecimento, associando-o aos conhecimentos cientificos, as linguagens que lhes dao suporte, as demais tecnologias, aos processos de producao e aos problemas que se propoem solucionar.",
+          "objetos_conhecimento": ["LC-OC8", "LC-OC1"],
+          "habilidades": [
+            {"codigo": "LC-H28", "descricao": "Reconhecer a funcao e o impacto social das diferentes tecnologias da comunicacao e informacao."},
+            {"codigo": "LC-H29", "descricao": "Identificar pela analise de suas linguagens, as tecnologias da comunicacao e informacao."},
+            {"codigo": "LC-H30", "descricao": "Relacionar as tecnologias de comunicacao e informacao ao desenvolvimento das sociedades e ao conhecimento que elas produzem."}
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "MT",
+      "nome": "Matematica e suas Tecnologias",
+      "objetos_conhecimento": [
+        {"codigo": "MT-OC1", "titulo": "Conhecimentos numericos", "descricao": "Operacoes em conjuntos numericos (naturais, inteiros, racionais e reais), desigualdades, divisibilidade, fatoracao, razoes e proporcoes, porcentagem e juros, relacoes de dependencia entre grandezas, sequencias e progressoes, principios de contagem."},
+        {"codigo": "MT-OC2", "titulo": "Conhecimentos geometricos", "descricao": "Caracteristicas das figuras geometricas planas e espaciais; grandezas, unidades de medida e escalas; comprimentos, areas e volumes; angulos; posicoes de retas; simetrias de figuras planas ou espaciais; congruencia e semelhanca de triangulos; teorema de Tales; relacoes metricas nos triangulos; circunferencias; trigonometria do angulo agudo."},
+        {"codigo": "MT-OC3", "titulo": "Conhecimentos de estatistica e probabilidade", "descricao": "Representacao e analise de dados; medidas de tendencia central (medias, moda e mediana); desvios e variancia; nocoes de probabilidade."},
+        {"codigo": "MT-OC4", "titulo": "Conhecimentos algebricos", "descricao": "Graficos e funcoes; funcoes algebricas do 1o e do 2o graus, polinomiais, racionais, exponenciais e logaritmicas; equacoes e inequacoes; relacoes no ciclo trigonometrico e funcoes trigonometricas."},
+        {"codigo": "MT-OC5", "titulo": "Conhecimentos algebricos/geometricos", "descricao": "Plano cartesiano; retas; circunferencias; paralelismo e perpendicularidade, sistemas de equacoes."}
+      ],
+      "competencias": [
+        {
+          "numero": 1,
+          "descricao": "Construir significados para os numeros naturais, inteiros, racionais e reais.",
+          "objetos_conhecimento": ["MT-OC1"],
+          "habilidades": [
+            {"codigo": "MT-H1", "descricao": "Reconhecer, no contexto social, diferentes significados e representacoes dos numeros e operacoes - naturais, inteiros, racionais ou reais."},
+            {"codigo": "MT-H2", "descricao": "Identificar padroes numericos ou principios de contagem."},
+            {"codigo": "MT-H3", "descricao": "Resolver situacao-problema envolvendo conhecimentos numericos."},
+            {"codigo": "MT-H4", "descricao": "Avaliar a razoabilidade de um resultado numerico na construcao de argumentos sobre afirmacoes quantitativas."},
+            {"codigo": "MT-H5", "descricao": "Avaliar propostas de intervencao na realidade utilizando conhecimentos numericos."}
+          ]
+        },
+        {
+          "numero": 2,
+          "descricao": "Utilizar o conhecimento geometrico para realizar a leitura e a representacao da realidade e agir sobre ela.",
+          "objetos_conhecimento": ["MT-OC2"],
+          "habilidades": [
+            {"codigo": "MT-H6", "descricao": "Interpretar a localizacao e a movimentacao de pessoas/objetos no espaco tridimensional e sua representacao no espaco bidimensional."},
+            {"codigo": "MT-H7", "descricao": "Identificar caracteristicas de figuras planas ou espaciais."},
+            {"codigo": "MT-H8", "descricao": "Resolver situacao-problema que envolva conhecimentos geometricos de espaco e forma."},
+            {"codigo": "MT-H9", "descricao": "Utilizar conhecimentos geometricos de espaco e forma na selecao de argumentos propostos como solucao de problemas do cotidiano."}
+          ]
+        },
+        {
+          "numero": 3,
+          "descricao": "Construir nocoes de grandezas e medidas para a compreensao da realidade e a solucao de problemas do cotidiano.",
+          "objetos_conhecimento": ["MT-OC2"],
+          "habilidades": [
+            {"codigo": "MT-H10", "descricao": "Identificar relacoes entre grandezas e unidades de medida."},
+            {"codigo": "MT-H11", "descricao": "Utilizar a nocao de escalas na leitura de representacao de situacao do cotidiano."},
+            {"codigo": "MT-H12", "descricao": "Resolver situacao-problema que envolva medidas de grandezas."},
+            {"codigo": "MT-H13", "descricao": "Avaliar o resultado de uma medicao na construcao de um argumento consistente."},
+            {"codigo": "MT-H14", "descricao": "Avaliar proposta de intervencao na realidade utilizando conhecimentos geometricos relacionados a grandezas e medidas."}
+          ]
+        },
+        {
+          "numero": 4,
+          "descricao": "Construir nocoes de variacao de grandezas para a compreensao da realidade e a solucao de problemas do cotidiano.",
+          "objetos_conhecimento": ["MT-OC1", "MT-OC4"],
+          "habilidades": [
+            {"codigo": "MT-H15", "descricao": "Identificar a relacao de dependencia entre grandezas."},
+            {"codigo": "MT-H16", "descricao": "Resolver situacao-problema envolvendo a variacao de grandezas, direta ou inversamente proporcionais."},
+            {"codigo": "MT-H17", "descricao": "Analisar informacoes envolvendo a variacao de grandezas como recurso para a construcao de argumentacao."},
+            {"codigo": "MT-H18", "descricao": "Avaliar propostas de intervencao na realidade envolvendo variacao de grandezas."}
+          ]
+        },
+        {
+          "numero": 5,
+          "descricao": "Modelar e resolver problemas que envolvem variaveis socioeconomicas ou tecnico-cientificas, usando representacoes algebricas.",
+          "objetos_conhecimento": ["MT-OC4", "MT-OC5"],
+          "habilidades": [
+            {"codigo": "MT-H19", "descricao": "Identificar representacoes algebricas que expressem a relacao entre grandezas."},
+            {"codigo": "MT-H20", "descricao": "Interpretar grafico cartesiano que represente relacoes entre grandezas."},
+            {"codigo": "MT-H21", "descricao": "Resolver situacao-problema cuja modelagem envolva conhecimentos algebricos."},
+            {"codigo": "MT-H22", "descricao": "Utilizar conhecimentos algebricos/geometricos como recurso para a construcao de argumentacao."},
+            {"codigo": "MT-H23", "descricao": "Avaliar propostas de intervencao na realidade utilizando conhecimentos algebricos."}
+          ]
+        },
+        {
+          "numero": 6,
+          "descricao": "Interpretar informacoes de natureza cientifica e social obtidas da leitura de graficos e tabelas, realizando previsao de tendencia, extrapolacao, interpolacao e interpretacao.",
+          "objetos_conhecimento": ["MT-OC3", "MT-OC4"],
+          "habilidades": [
+            {"codigo": "MT-H24", "descricao": "Utilizar informacoes expressas em graficos ou tabelas para fazer inferencias."},
+            {"codigo": "MT-H25", "descricao": "Resolver problema com dados apresentados em tabelas ou graficos."},
+            {"codigo": "MT-H26", "descricao": "Analisar informacoes expressas em graficos ou tabelas como recurso para a construcao de argumentos."}
+          ]
+        },
+        {
+          "numero": 7,
+          "descricao": "Compreender o carater aleatorio e nao-deterministico dos fenomenos naturais e sociais e utilizar instrumentos adequados para medidas, determinacao de amostras e calculos de probabilidade para interpretar informacoes de variaveis apresentadas em uma distribuicao estatistica.",
+          "objetos_conhecimento": ["MT-OC3"],
+          "habilidades": [
+            {"codigo": "MT-H27", "descricao": "Calcular medidas de tendencia central ou de dispersao de um conjunto de dados expressos em uma tabela de frequencias de dados agrupados (nao em classes) ou em graficos."},
+            {"codigo": "MT-H28", "descricao": "Resolver situacao-problema que envolva conhecimentos de estatistica e probabilidade."},
+            {"codigo": "MT-H29", "descricao": "Utilizar conhecimentos de estatistica e probabilidade como recurso para a construcao de argumentacao."},
+            {"codigo": "MT-H30", "descricao": "Avaliar propostas de intervencao na realidade utilizando conhecimentos de estatistica e probabilidade."}
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "CN",
+      "nome": "Ciencias da Natureza e suas Tecnologias",
+      "objetos_conhecimento": [
+        {"codigo": "CN-FIS-OC1", "titulo": "Conhecimentos basicos e fundamentais (Fisica)", "descricao": "Nocoes de ordem de grandeza. Notacao Cientifica. Sistema Internacional de Unidades. Metodologia de investigacao. Observacoes e mensuracoes. Ferramentas basicas: graficos e vetores. Conceituacao de grandezas vetoriais e escalares. Operacoes basicas com vetores."},
+        {"codigo": "CN-FIS-OC2", "titulo": "O movimento, o equilibrio e a descoberta de leis fisicas", "descricao": "Grandezas fundamentais da mecanica: tempo, espaco, velocidade e aceleracao. Leis de Newton. Centro de massa. Lei da conservacao da quantidade de movimento e teorema do impulso. Momento de uma forca (torque). Condicoes de equilibrio estatico. Forca de atrito, peso, normal e tracao. Movimentos circulares e forca centripeta. Hidrostatica: empuxo, Principios de Pascal, Arquimedes e Stevin."},
+        {"codigo": "CN-FIS-OC3", "titulo": "Energia, trabalho e potencia", "descricao": "Conceituacao de trabalho, energia e potencia. Energia potencial e cinetica. Conservacao e dissipacao de energia mecanica. Trabalho da forca gravitacional. Forcas conservativas e dissipativas."},
+        {"codigo": "CN-FIS-OC4", "titulo": "A Mecanica e o funcionamento do Universo", "descricao": "Forca peso. Aceleracao gravitacional. Lei da Gravitacao Universal. Leis de Kepler. Movimentos de corpos celestes. Mares e variacoes climaticas. Concepcoes historicas sobre a origem do universo."},
+        {"codigo": "CN-FIS-OC5", "titulo": "Fenomenos Eletricos e Magneticos", "descricao": "Carga e corrente eletrica. Lei de Coulomb. Campo e potencial eletrico. Capacitores. Efeito Joule. Lei de Ohm. Resistencia e resistividade. Circuitos eletricos simples. Correntes continua e alternada. Campo magnetico e imas permanentes."},
+        {"codigo": "CN-FIS-OC6", "titulo": "Oscilacoes, ondas, optica e radiacao", "descricao": "Feixes e frentes de onda. Reflexao e refracao. Optica geometrica: lentes e espelhos. Formacao de imagens. Fenomenos ondulatorios: periodo, frequencia, ciclo, propagacao."},
+        {"codigo": "CN-FIS-OC7", "titulo": "O calor e os fenomenos termicos", "descricao": "Calor e temperatura. Escalas termometricas. Transferencia de calor e equilibrio termico. Capacidade calorifica e calor especifico. Dilatacao termica. Mudancas de estado fisico. Gases ideais. Maquinas termicas, Ciclo de Carnot, Leis da Termodinamica."},
+        {"codigo": "CN-QUI-OC1", "titulo": "Transformacoes Quimicas", "descricao": "Evidencias e interpretacao de transformacoes quimicas. Sistemas gasosos, lei dos gases, teoria cinetica. Modelos atomicos de Dalton, Thomson, Rutherford, Rutherford-Bohr. Numero atomico, numero de massa, isotopos. Tabela periodica. Reacoes quimicas."},
+        {"codigo": "CN-QUI-OC2", "titulo": "Representacao das transformacoes quimicas", "descricao": "Formulas quimicas. Balanceamento de equacoes. Leis ponderais. Grandezas quimicas: massa, volume, mol, massa molar, constante de Avogadro. Calculos estequiometricos."},
+        {"codigo": "CN-QUI-OC3", "titulo": "Materiais, suas propriedades e usos", "descricao": "Propriedades e estados fisicos de materiais. Misturas e metodos de separacao. Metais e ligas metalicas. Substancias ionicas, moleculares e ligacoes quimicas. Forcas intermoleculares."},
+        {"codigo": "CN-QUI-OC4", "titulo": "Agua", "descricao": "Ocorrencia e importancia biologica. Solucoes verdadeiras, coloidais e suspensoes. Solubilidade e concentracao. Propriedades coligativas. Acidos, bases, sais e oxidos."},
+        {"codigo": "CN-QUI-OC5", "titulo": "Transformacoes Quimicas e Energia", "descricao": "Calor de reacao. Entalpia. Equacoes termoquimicas. Lei de Hess. Reacao de oxirreducao. Pilha e eletrolise. Transformacoes nucleares, fissao e fusao, radioatividade."},
+        {"codigo": "CN-QUI-OC6", "titulo": "Dinamica das Transformacoes Quimicas", "descricao": "Velocidade de reacao. Energia de ativacao. Fatores que alteram a velocidade: concentracao, pressao, temperatura, catalisador."},
+        {"codigo": "CN-QUI-OC7", "titulo": "Transformacao Quimica e Equilibrio", "descricao": "Sistema em equilibrio, constante de equilibrio. Produto ionico da agua, equilibrio acido-base e pH. Solubilidade dos sais e hidrolise."},
+        {"codigo": "CN-QUI-OC8", "titulo": "Compostos de Carbono", "descricao": "Funcoes organicas. Hidrocarbonetos e compostos oxigenados/nitrogenados. Macromoleculas naturais e sinteticas, polimeros. Proteinas e enzimas."},
+        {"codigo": "CN-QUI-OC9", "titulo": "Relacoes da Quimica com as Tecnologias, a Sociedade e o Meio Ambiente", "descricao": "Quimica no cotidiano, agricultura, saude e alimentos. Industria quimica, mineracao e metalurgia. Poluicao e tratamento de agua e ar."},
+        {"codigo": "CN-QUI-OC10", "titulo": "Energias Quimicas no Cotidiano", "descricao": "Petroleo, gas natural, carvao, biomassa e biocombustiveis. Impactos ambientais de combustiveis fosseis. Energia nuclear e lixo atomico."},
+        {"codigo": "CN-BIO-OC1", "titulo": "Moleculas, celulas e tecidos", "descricao": "Estrutura e fisiologia celular. Metabolismo energetico: fotossintese e respiracao. Codificacao genetica e sintese proteica. Celulas-tronco, clonagem, DNA recombinante. Biotecnologia e sustentabilidade."},
+        {"codigo": "CN-BIO-OC2", "titulo": "Hereditariedade e diversidade da vida", "descricao": "Transmissao de caracteristicas hereditarias. Antigenos, anticorpos, grupos sanguineos. Mutacoes genicas e cromossomicas. Fundamentos geneticos da evolucao."},
+        {"codigo": "CN-BIO-OC3", "titulo": "Identidade dos seres vivos", "descricao": "Niveis de organizacao dos seres vivos. Virus, procariontes e eucariontes. Sistematica e evolucao. Embriologia, anatomia e fisiologia humana."},
+        {"codigo": "CN-BIO-OC4", "titulo": "Ecologia e ciencias ambientais", "descricao": "Ecossistemas, fatores bioticos e abioticos. Ciclos biogeoquimicos. Biomas brasileiros. Problemas ambientais: mudancas climaticas, desmatamento, poluicao. Conservacao da biodiversidade."},
+        {"codigo": "CN-BIO-OC5", "titulo": "Origem e evolucao da vida", "descricao": "Hipoteses sobre a origem do universo, da Terra e dos seres vivos. Teoria evolutiva de Darwin. Teoria sintetica da evolucao."},
+        {"codigo": "CN-BIO-OC6", "titulo": "Qualidade de vida das populacoes humanas", "descricao": "Indicadores sociais, ambientais e economicos. Doencas que afetam a populacao brasileira. Aspectos sociais da biologia: drogas, gravidez na adolescencia, obesidade."}
+      ],
+      "competencias": [
+        {
+          "numero": 1,
+          "descricao": "Compreender as ciencias naturais e as tecnologias a elas associadas como construcoes humanas, percebendo seus papeis nos processos de producao e no desenvolvimento economico e social da humanidade.",
+          "objetos_conhecimento": ["CN-FIS-OC6", "CN-BIO-OC4"],
+          "habilidades": [
+            {"codigo": "CN-H1", "descricao": "Reconhecer caracteristicas ou propriedades de fenomenos ondulatorios ou oscilatorios, relacionando-os a seus usos em diferentes contextos."},
+            {"codigo": "CN-H2", "descricao": "Associar a solucao de problemas de comunicacao, transporte, saude ou outro, com o correspondente desenvolvimento cientifico e tecnologico."},
+            {"codigo": "CN-H3", "descricao": "Confrontar interpretacoes cientificas com interpretacoes baseadas no senso comum, ao longo do tempo ou em diferentes culturas."},
+            {"codigo": "CN-H4", "descricao": "Avaliar propostas de intervencao no ambiente, considerando a qualidade da vida humana ou medidas de conservacao, recuperacao ou utilizacao sustentavel da biodiversidade."}
+          ]
+        },
+        {
+          "numero": 2,
+          "descricao": "Identificar a presenca e aplicar as tecnologias associadas as ciencias naturais em diferentes contextos.",
+          "objetos_conhecimento": ["CN-FIS-OC5", "CN-QUI-OC3"],
+          "habilidades": [
+            {"codigo": "CN-H5", "descricao": "Dimensionar circuitos ou dispositivos eletricos de uso cotidiano."},
+            {"codigo": "CN-H6", "descricao": "Relacionar informacoes para compreender manuais de instalacao ou utilizacao de aparelhos, ou sistemas tecnologicos de uso comum."},
+            {"codigo": "CN-H7", "descricao": "Selecionar testes de controle, parametros ou criterios para a comparacao de materiais e produtos, tendo em vista a defesa do consumidor, a saude do trabalhador ou a qualidade de vida."}
+          ]
+        },
+        {
+          "numero": 3,
+          "descricao": "Associar intervencoes que resultam em degradacao ou conservacao ambiental a processos produtivos e sociais e a instrumentos ou acoes cientifico-tecnologicos.",
+          "objetos_conhecimento": ["CN-BIO-OC4", "CN-QUI-OC9", "CN-BIO-OC1"],
+          "habilidades": [
+            {"codigo": "CN-H8", "descricao": "Identificar etapas em processos de obtencao, transformacao, utilizacao ou reciclagem de recursos naturais, energeticos ou materias-primas, considerando processos biologicos, quimicos ou fisicos neles envolvidos."},
+            {"codigo": "CN-H9", "descricao": "Compreender a importancia dos ciclos biogeoquimicos ou do fluxo energia para a vida, ou da acao de agentes ou fenomenos que podem causar alteracoes nesses processos."},
+            {"codigo": "CN-H10", "descricao": "Analisar perturbacoes ambientais, identificando fontes, transporte e(ou) destino dos poluentes ou prevendo efeitos em sistemas naturais, produtivos ou sociais."},
+            {"codigo": "CN-H11", "descricao": "Reconhecer beneficios, limitacoes e aspectos eticos da biotecnologia, considerando estruturas e processos biologicos envolvidos em produtos biotecnologicos."},
+            {"codigo": "CN-H12", "descricao": "Avaliar impactos em ambientes naturais decorrentes de atividades sociais ou economicas, considerando interesses contraditorios."}
+          ]
+        },
+        {
+          "numero": 4,
+          "descricao": "Compreender interacoes entre organismos e ambiente, em particular aquelas relacionadas a saude humana, relacionando conhecimentos cientificos, aspectos culturais e caracteristicas individuais.",
+          "objetos_conhecimento": ["CN-BIO-OC1", "CN-BIO-OC2", "CN-BIO-OC3"],
+          "habilidades": [
+            {"codigo": "CN-H13", "descricao": "Reconhecer mecanismos de transmissao da vida, prevendo ou explicando a manifestacao de caracteristicas dos seres vivos."},
+            {"codigo": "CN-H14", "descricao": "Identificar padroes em fenomenos e processos vitais dos organismos, como manutencao do equilibrio interno, defesa, relacoes com o ambiente, sexualidade, entre outros."},
+            {"codigo": "CN-H15", "descricao": "Interpretar modelos e experimentos para explicar fenomenos ou processos biologicos em qualquer nivel de organizacao dos sistemas biologicos."},
+            {"codigo": "CN-H16", "descricao": "Compreender o papel da evolucao na producao de padroes, processos biologicos ou na organizacao taxonomica dos seres vivos."}
+          ]
+        },
+        {
+          "numero": 5,
+          "descricao": "Entender metodos e procedimentos proprios das ciencias naturais e aplica-los em diferentes contextos.",
+          "objetos_conhecimento": ["CN-FIS-OC1"],
+          "habilidades": [
+            {"codigo": "CN-H17", "descricao": "Relacionar informacoes apresentadas em diferentes formas de linguagem e representacao usadas nas ciencias fisicas, quimicas ou biologicas, como texto discursivo, graficos, tabelas, relacoes matematicas ou linguagem simbolica."},
+            {"codigo": "CN-H18", "descricao": "Relacionar propriedades fisicas, quimicas ou biologicas de produtos, sistemas ou procedimentos tecnologicos as finalidades a que se destinam."},
+            {"codigo": "CN-H19", "descricao": "Avaliar metodos, processos ou procedimentos das ciencias naturais que contribuam para diagnosticar ou solucionar problemas de ordem social, economica ou ambiental."}
+          ]
+        },
+        {
+          "numero": 6,
+          "descricao": "Apropriar-se de conhecimentos da fisica para, em situacoes problema, interpretar, avaliar ou planejar intervencoes cientifico-tecnologicas.",
+          "objetos_conhecimento": ["CN-FIS-OC2", "CN-FIS-OC3", "CN-FIS-OC4", "CN-FIS-OC5", "CN-FIS-OC6", "CN-FIS-OC7"],
+          "habilidades": [
+            {"codigo": "CN-H20", "descricao": "Caracterizar causas ou efeitos dos movimentos de particulas, substancias, objetos ou corpos celestes."},
+            {"codigo": "CN-H21", "descricao": "Utilizar leis fisicas e (ou) quimicas para interpretar processos naturais ou tecnologicos inseridos no contexto da termodinamica e(ou) do eletromagnetismo."},
+            {"codigo": "CN-H22", "descricao": "Compreender fenomenos decorrentes da interacao entre a radiacao e a materia em suas manifestacoes em processos naturais ou tecnologicos, ou em suas implicacoes biologicas, sociais, economicas ou ambientais."},
+            {"codigo": "CN-H23", "descricao": "Avaliar possibilidades de geracao, uso ou transformacao de energia em ambientes especificos, considerando implicacoes eticas, ambientais, sociais e/ou economicas."}
+          ]
+        },
+        {
+          "numero": 7,
+          "descricao": "Apropriar-se de conhecimentos da quimica para, em situacoes problema, interpretar, avaliar ou planejar intervencoes cientifico-tecnologicas.",
+          "objetos_conhecimento": ["CN-QUI-OC1", "CN-QUI-OC2", "CN-QUI-OC3", "CN-QUI-OC4", "CN-QUI-OC5", "CN-QUI-OC6", "CN-QUI-OC7", "CN-QUI-OC8", "CN-QUI-OC9", "CN-QUI-OC10"],
+          "habilidades": [
+            {"codigo": "CN-H24", "descricao": "Utilizar codigos e nomenclatura da quimica para caracterizar materiais, substancias ou transformacoes quimicas."},
+            {"codigo": "CN-H25", "descricao": "Caracterizar materiais ou substancias, identificando etapas, rendimentos ou implicacoes biologicas, sociais, economicas ou ambientais de sua obtencao ou producao."},
+            {"codigo": "CN-H26", "descricao": "Avaliar implicacoes sociais, ambientais e/ou economicas na producao ou no consumo de recursos energeticos ou minerais, identificando transformacoes quimicas ou de energia envolvidas nesses processos."},
+            {"codigo": "CN-H27", "descricao": "Avaliar propostas de intervencao no meio ambiente aplicando conhecimentos quimicos, observando riscos ou beneficios."}
+          ]
+        },
+        {
+          "numero": 8,
+          "descricao": "Apropriar-se de conhecimentos da biologia para, em situacoes problema, interpretar, avaliar ou planejar intervencoes cientifico-tecnologicas.",
+          "objetos_conhecimento": ["CN-BIO-OC3", "CN-BIO-OC1", "CN-BIO-OC6"],
+          "habilidades": [
+            {"codigo": "CN-H28", "descricao": "Associar caracteristicas adaptativas dos organismos com seu modo de vida ou com seus limites de distribuicao em diferentes ambientes, em especial em ambientes brasileiros."},
+            {"codigo": "CN-H29", "descricao": "Interpretar experimentos ou tecnicas que utilizam seres vivos, analisando implicacoes para o ambiente, a saude, a producao de alimentos, materias primas ou produtos industriais."},
+            {"codigo": "CN-H30", "descricao": "Avaliar propostas de alcance individual ou coletivo, identificando aquelas que visam a preservacao e a implementacao da saude individual, coletiva ou do ambiente."}
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "CH",
+      "nome": "Ciencias Humanas e suas Tecnologias",
+      "objetos_conhecimento": [
+        {"codigo": "CH-OC1", "titulo": "Diversidade cultural, conflitos e vida em sociedade", "descricao": "Cultura material e imaterial; patrimonio e diversidade cultural no Brasil. A Conquista da America e conflitos entre europeus e indigenas. Historia cultural dos povos africanos e a luta dos negros no Brasil. Historia dos povos indigenas e a formacao sociocultural brasileira. Movimentos culturais no mundo ocidental e seus impactos na vida politica e social."},
+        {"codigo": "CH-OC2", "titulo": "Formas de organizacao social, movimentos sociais, pensamento politico e acao do Estado", "descricao": "Cidadania e democracia na Antiguidade e na Idade Moderna. Revolucoes sociais e politicas na Europa Moderna. Formacao territorial brasileira. Independencia politica das colonias da America. Pensamento liberal nos seculos XIX e XX. Migracao e imigracao no Brasil. Revolucoes do seculo XX (Bolchevique, Chinesa, Cubana). Geopolitica e conflitos (Imperialismo, Guerras Mundiais, Guerra Fria). Sistemas totalitarios (nazi-fascismo, stalinismo) e ditaduras na America Latina. Conflitos politico-culturais pos-Guerra Fria e organismos multilaterais. Luta pela conquista de direitos civis, humanos, politicos e sociais; politicas afirmativas. Vida urbana: redes, hierarquia, pobreza e segregacao espacial."},
+        {"codigo": "CH-OC3", "titulo": "Caracteristicas e transformacoes das estruturas produtivas", "descricao": "Formas de organizacao da producao: escravismo, feudalismo, capitalismo, socialismo. Economia agro-exportadora brasileira. Revolucao Industrial e formacao do espaco urbano-industrial. Fordismo, toyotismo e novas tecnicas de producao. Industrializacao e urbanizacao brasileiras. Globalizacao e novas tecnologias de telecomunicacao. Producao e transformacao dos espacos agrarios; agronegocio e agricultura familiar."},
+        {"codigo": "CH-OC4", "titulo": "Os dominios naturais e a relacao do ser humano com o ambiente", "descricao": "Relacao homem-natureza e apropriacao dos recursos naturais. Impacto ambiental das atividades economicas no Brasil. Recursos minerais, energeticos e hidricos. Questoes ambientais contemporaneas: mudanca climatica, efeito estufa, chuva acida, camada de ozonio. Sustentabilidade. Estrutura interna da Terra, solo e relevo. Classificacao climatica e dominios de vegetacao no Brasil e no mundo."},
+        {"codigo": "CH-OC5", "titulo": "Representacao espacial", "descricao": "Projecoes cartograficas; leitura de mapas tematicos, fisicos e politicos; tecnologias modernas aplicadas a cartografia."}
+      ],
+      "competencias": [
+        {
+          "numero": 1,
+          "descricao": "Compreender os elementos culturais que constituem as identidades.",
+          "objetos_conhecimento": ["CH-OC1"],
+          "habilidades": [
+            {"codigo": "CH-H1", "descricao": "Interpretar historicamente e/ou geograficamente fontes documentais acerca de aspectos da cultura."},
+            {"codigo": "CH-H2", "descricao": "Analisar a producao da memoria pelas sociedades humanas."},
+            {"codigo": "CH-H3", "descricao": "Associar as manifestacoes culturais do presente aos seus processos historicos."},
+            {"codigo": "CH-H4", "descricao": "Comparar pontos de vista expressos em diferentes fontes sobre determinado aspecto da cultura."},
+            {"codigo": "CH-H5", "descricao": "Identificar as manifestacoes ou representacoes da diversidade do patrimonio cultural e artistico em diferentes sociedades."}
+          ]
+        },
+        {
+          "numero": 2,
+          "descricao": "Compreender as transformacoes dos espacos geograficos como produto das relacoes socioeconomicas e culturais de poder.",
+          "objetos_conhecimento": ["CH-OC2", "CH-OC5"],
+          "habilidades": [
+            {"codigo": "CH-H6", "descricao": "Interpretar diferentes representacoes graficas e cartograficas dos espacos geograficos."},
+            {"codigo": "CH-H7", "descricao": "Identificar os significados historico-geograficos das relacoes de poder entre as nacoes."},
+            {"codigo": "CH-H8", "descricao": "Analisar a acao dos estados nacionais no que se refere a dinamica dos fluxos populacionais e no enfrentamento de problemas de ordem economico-social."},
+            {"codigo": "CH-H9", "descricao": "Comparar o significado historico-geografico das organizacoes politicas e socioeconomicas em escala local, regional ou mundial."},
+            {"codigo": "CH-H10", "descricao": "Reconhecer a dinamica da organizacao dos movimentos sociais e a importancia da participacao da coletividade na transformacao da realidade historico-geografica."}
+          ]
+        },
+        {
+          "numero": 3,
+          "descricao": "Compreender a producao e o papel historico das instituicoes sociais, politicas e economicas, associando-as aos diferentes grupos, conflitos e movimentos sociais.",
+          "objetos_conhecimento": ["CH-OC2"],
+          "habilidades": [
+            {"codigo": "CH-H11", "descricao": "Identificar registros de praticas de grupos sociais no tempo e no espaco."},
+            {"codigo": "CH-H12", "descricao": "Analisar o papel da justica como instituicao na organizacao das sociedades."},
+            {"codigo": "CH-H13", "descricao": "Analisar a atuacao dos movimentos sociais que contribuiram para mudancas ou rupturas em processos de disputa pelo poder."},
+            {"codigo": "CH-H14", "descricao": "Comparar diferentes pontos de vista, presentes em textos analiticos e interpretativos, sobre situacao ou fatos de natureza historico-geografica acerca das instituicoes sociais, politicas e economicas."},
+            {"codigo": "CH-H15", "descricao": "Avaliar criticamente conflitos culturais, sociais, politicos, economicos ou ambientais ao longo da historia."}
+          ]
+        },
+        {
+          "numero": 4,
+          "descricao": "Entender as transformacoes tecnicas e tecnologicas e seu impacto nos processos de producao, no desenvolvimento do conhecimento e na vida social.",
+          "objetos_conhecimento": ["CH-OC3"],
+          "habilidades": [
+            {"codigo": "CH-H16", "descricao": "Identificar registros sobre o papel das tecnicas e tecnologias na organizacao do trabalho e/ou da vida social."},
+            {"codigo": "CH-H17", "descricao": "Analisar fatores que explicam o impacto das novas tecnologias no processo de territorializacao da producao."},
+            {"codigo": "CH-H18", "descricao": "Analisar diferentes processos de producao ou circulacao de riquezas e suas implicacoes socio-espaciais."},
+            {"codigo": "CH-H19", "descricao": "Reconhecer as transformacoes tecnicas e tecnologicas que determinam as varias formas de uso e apropriacao dos espacos rural e urbano."},
+            {"codigo": "CH-H20", "descricao": "Selecionar argumentos favoraveis ou contrarios as modificacoes impostas pelas novas tecnologias a vida social e ao mundo do trabalho."}
+          ]
+        },
+        {
+          "numero": 5,
+          "descricao": "Utilizar os conhecimentos historicos para compreender e valorizar os fundamentos da cidadania e da democracia, favorecendo uma atuacao consciente do individuo na sociedade.",
+          "objetos_conhecimento": ["CH-OC2"],
+          "habilidades": [
+            {"codigo": "CH-H21", "descricao": "Identificar o papel dos meios de comunicacao na construcao da vida social."},
+            {"codigo": "CH-H22", "descricao": "Analisar as lutas sociais e conquistas obtidas no que se refere as mudancas nas legislacoes ou nas politicas publicas."},
+            {"codigo": "CH-H23", "descricao": "Analisar a importancia dos valores eticos na estruturacao politica das sociedades."},
+            {"codigo": "CH-H24", "descricao": "Relacionar cidadania e democracia na organizacao das sociedades."},
+            {"codigo": "CH-H25", "descricao": "Identificar estrategias que promovam formas de inclusao social."}
+          ]
+        },
+        {
+          "numero": 6,
+          "descricao": "Compreender a sociedade e a natureza, reconhecendo suas interacoes no espaco em diferentes contextos historicos e geograficos.",
+          "objetos_conhecimento": ["CH-OC4"],
+          "habilidades": [
+            {"codigo": "CH-H26", "descricao": "Identificar em fontes diversas o processo de ocupacao dos meios fisicos e as relacoes da vida humana com a paisagem."},
+            {"codigo": "CH-H27", "descricao": "Analisar de maneira critica as interacoes da sociedade com o meio fisico, levando em consideracao aspectos historicos e(ou) geograficos."},
+            {"codigo": "CH-H28", "descricao": "Relacionar o uso das tecnologias com os impactos socio-ambientais em diferentes contextos historico-geograficos."},
+            {"codigo": "CH-H29", "descricao": "Reconhecer a funcao dos recursos naturais na producao do espaco geografico, relacionando-os com as mudancas provocadas pelas acoes humanas."},
+            {"codigo": "CH-H30", "descricao": "Avaliar as relacoes entre preservacao e degradacao da vida no planeta nas diferentes escalas."}
+          ]
+        }
+      ]
+    }
+  ]
+}
