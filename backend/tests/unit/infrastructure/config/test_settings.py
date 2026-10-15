@@ -102,7 +102,7 @@ class TestTaskiqSettings:
         assert settings.TASKIQ_REDIS_HOST == "localhost"
         assert settings.TASKIQ_REDIS_PORT == 6379
         assert settings.TASKIQ_REDIS_DB == 3
-        assert settings.TASKIQ_REDIS_PASSWORD is None
+        assert not settings.TASKIQ_REDIS_PASSWORD
         assert settings.TASKIQ_WORKER_CONCURRENCY == 2
         assert settings.TASKIQ_MAX_TASKS_PER_WORKER == 1000
 

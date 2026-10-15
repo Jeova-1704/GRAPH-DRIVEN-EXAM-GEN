@@ -1,0 +1,31 @@
+# Standalone Neo4j service for local development.
+# Kept separate from the `bp deploy generate` compose files (those are
+# regenerated and don't know about Neo4j). Run alongside them:
+#   docker compose -f docker-compose.neo4j.yml up -d
+# Then set NEO4J_ENABLED=true in backend/.env (NEO4J_URI stays bolt://localhost:7687
+# for a host-side backend, or bolt://neo4j:7687 if the backend also runs in Docker
+# on this same compose project).
+
+name: graph-driven-exam-gen-neo4j
+
+services:
+  neo4j:
+    image: neo4j:5.15-community
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:-neo4j_password_change_me}
+      NEO4J_PLUGINS: '["apoc"]'
+    ports:
+      - "7474:7474" # Browser UI
+      - "7687:7687" # Bolt
+    volumes:
+      - neo4j-data:/data
+      - neo4j-logs:/logs
+    healthcheck:
+      test: ["CMD-SHELL", "wget -O /dev/null -q http://localhost:7474 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  neo4j-data:
+  neo4j-logs:

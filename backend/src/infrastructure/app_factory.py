@@ -22,11 +22,13 @@ from .config.settings import (
     DatabaseSettings,
     EnvironmentOption,
     EnvironmentSettings,
+    Neo4jSettings,
     RateLimiterSettings,
     Settings,
     get_settings,
 )
 from .database.session import create_tables
+from .graph.session import close_driver, verify_connectivity
 from .middleware import ClientCacheMiddleware, SecurityHeadersMiddleware
 from .rate_limit.initialize import close_rate_limiter, initialize_rate_limiter
 from .rate_limit.middleware import RateLimiterMiddleware
@@ -63,6 +65,9 @@ def lifespan_factory(
             if isinstance(settings, RateLimiterSettings) and settings.RATE_LIMITER_ENABLED:
                 await initialize_rate_limiter()
 
+            if isinstance(settings, Neo4jSettings) and settings.NEO4J_ENABLED:
+                await verify_connectivity()
+
             await auth.initialize()
 
             initialization_complete.set()
@@ -77,6 +82,9 @@ def lifespan_factory(
 
             if isinstance(settings, RateLimiterSettings) and settings.RATE_LIMITER_ENABLED:
                 await close_rate_limiter()
+
+            if isinstance(settings, Neo4jSettings) and settings.NEO4J_ENABLED:
+                await close_driver()
 
     return lifespan
 

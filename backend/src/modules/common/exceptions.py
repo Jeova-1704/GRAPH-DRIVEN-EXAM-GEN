@@ -65,3 +65,15 @@ class UsageLimitExceededError(DomainError):
     """Raised when a user exceeds their usage limits."""
 
     pass
+
+
+class GeracaoError(DomainError):
+    """Raised when the generation LLM's response can't be parsed as a valid item (Secao 3.8 do TCC)."""
+
+    pass
+
+
+class AvaliacaoError(DomainError):
+    """Raised when the judge LLM's response can't be parsed as a valid judgment (Secao 3.9.2 do TCC)."""
+
+    pass

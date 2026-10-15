@@ -11,7 +11,11 @@ from .enums import CacheBackend, LogFormat, LogLevel, SessionBackend, TaskiqBrok
 logger = logging.getLogger(__name__)
 
 current_file_dir = os.path.dirname(os.path.realpath(__file__))
-project_root = os.path.abspath(os.path.join(current_file_dir, "..", "..", "..", ".."))
+# config -> infrastructure -> src -> backend (3 hops). This must land on `backend/`,
+# matching where .env.example lives and where /app/.env resolves to inside the
+# container (Dockerfile copies backend/ to /app) — an extra ".." here silently landed
+# one level too high (the workspace root), so .env was never found outside Docker.
+project_root = os.path.abspath(os.path.join(current_file_dir, "..", "..", ".."))
 
 env_paths = [
     "/app/.env",
@@ -256,6 +260,53 @@ class AuthSettings(BaseSettings):
     OAUTH_REDIRECT_BASE_URL: str = config("OAUTH_REDIRECT_BASE_URL", default="http://localhost:8000")
 
 
+class Neo4jSettings(BaseSettings):
+    """Neo4j graph database connection settings.
+
+    The ENEM Reference Matrix (Area/Competencia/Habilidade/ObjetoConhecimento)
+    and generated/official Questao items live in Neo4j, not Postgres — see
+    modules/matriz_referencia and modules/questoes.
+    """
+
+    NEO4J_ENABLED: bool = config("NEO4J_ENABLED", default=False, cast=bool)
+    NEO4J_URI: str = config("NEO4J_URI", default="bolt://localhost:7687")
+    NEO4J_USER: str = config("NEO4J_USER", default="neo4j")
+    NEO4J_PASSWORD: str = config("NEO4J_PASSWORD", default="neo4j_password_change_me")
+    NEO4J_DATABASE: str = config("NEO4J_DATABASE", default="neo4j")
+    NEO4J_MAX_CONNECTION_POOL_SIZE: int = config("NEO4J_MAX_CONNECTION_POOL_SIZE", default=50, cast=int)
+
+
+class GLMSettings(BaseSettings):
+    """Zhipu AI GLM API settings for item generation, LLM-as-Judge and embeddings."""
+
+    GLM_API_KEY: str = config("GLM_API_KEY", default="")
+    GLM_GENERATION_MODEL: str = config("GLM_GENERATION_MODEL", default="glm-4.5")
+    GLM_JUDGE_MODEL: str = config("GLM_JUDGE_MODEL", default="glm-4.5")
+    GLM_EMBEDDING_MODEL: str = config("GLM_EMBEDDING_MODEL", default="embedding-2")
+    GLM_TEMPERATURE: float = config("GLM_TEMPERATURE", default=0.0, cast=float)
+    GLM_MAX_TOKENS: int = config("GLM_MAX_TOKENS", default=8192, cast=int)
+    GLM_MAX_RETRIES: int = config("GLM_MAX_RETRIES", default=2, cast=int)
+    GLM_TIMEOUT_SECONDS: int = config("GLM_TIMEOUT_SECONDS", default=120, cast=int)
+
+
+class GeracaoSettings(BaseSettings):
+    """Experiment generation parameters (Secao 3.7 do TCC)."""
+
+    GERACAO_ITENS_POR_CONDICAO: int = config("GERACAO_ITENS_POR_CONDICAO", default=5, cast=int)
+    GERACAO_FEWSHOTS_POR_HABILIDADE: int = config("GERACAO_FEWSHOTS_POR_HABILIDADE", default=5, cast=int)
+
+
+class ValidacaoAvaliacaoSettings(BaseSettings):
+    """Structural validation thresholds (Secao 3.8) and statistical significance levels (Secao 3.11)."""
+
+    VALIDACAO_ENUNCIADO_MIN_CHARS: int = config("VALIDACAO_ENUNCIADO_MIN_CHARS", default=50, cast=int)
+    VALIDACAO_JUSTIFICATIVA_MIN_CHARS: int = config("VALIDACAO_JUSTIFICATIVA_MIN_CHARS", default=100, cast=int)
+    AVALIACAO_JUDGE_ESCALA_MIN: int = config("AVALIACAO_JUDGE_ESCALA_MIN", default=1, cast=int)
+    AVALIACAO_JUDGE_ESCALA_MAX: int = config("AVALIACAO_JUDGE_ESCALA_MAX", default=5, cast=int)
+    ESTATISTICA_ALPHA: float = config("ESTATISTICA_ALPHA", default=0.05, cast=float)
+    ESTATISTICA_ALPHA_BONFERRONI: float = config("ESTATISTICA_ALPHA_BONFERRONI", default=0.0167, cast=float)
+
+
 class APISettings(BaseSettings):
     """API-related settings."""
 
@@ -378,6 +429,10 @@ class Settings(
     CompressionSettings,
     APIDocSettings,
     AuthSettings,
+    Neo4jSettings,
+    GLMSettings,
+    GeracaoSettings,
+    ValidacaoAvaliacaoSettings,
     APISettings,
     AppSettings,
     AdminSettings,
