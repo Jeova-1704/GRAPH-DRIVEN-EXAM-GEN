@@ -2,7 +2,7 @@
 <html lang="pt-BR"><head><meta charset="utf-8"><title>Arquitetura</title>
 <link rel="stylesheet" href="base.css">
 <style>
-  #grade { display: grid; grid-template-columns: 1fr 300px; column-gap: 110px; row-gap: 64px; }
+  #grade { display: grid; grid-template-columns: 1fr 270px; column-gap: 80px; row-gap: 64px; }
   .card.pessoa { flex-direction: column; text-align: center; padding: 16px; }
   .card.pessoa .ic { width: 52px; height: 52px; color: #334155; }
 </style>
@@ -13,11 +13,11 @@
   <!-- linha 1 -->
   <div class="banda apresentacao" id="b-apres">
     <div class="titulo"><i data-ic="mdi:monitor-dashboard"></i>Camada de apresentação</div>
-    <div class="linha">
+    <div class="linha" style="display:grid;grid-template-columns:repeat(4,1fr)">
       <div class="card" id="c-nav"><div class="ic"><i data-ic="logos:chrome"></i></div><div><div class="nome">Navegador</div><div class="desc">acesso local</div></div></div>
-      <div class="card" id="c-next" style="flex:1"><div class="ic"><i data-ic="logos:nextjs-icon"></i></div><div><div class="nome">Next.js 16</div><div class="desc">App Router</div></div>
-        <div class="ic" style="margin-left:6px"><i data-ic="logos:react"></i></div><div><div class="nome">React 19</div><div class="desc">componentes</div></div>
-        <div class="ic" style="margin-left:6px;width:36px;height:36px"><i data-ic="logos:typescript-icon"></i></div><div><div class="nome">TypeScript</div><div class="desc">Axios · React Flow · Recharts</div></div></div>
+      <div class="card" id="c-next"><div class="ic"><i data-ic="logos:nextjs-icon"></i></div><div><div class="nome">Next.js 16</div><div class="desc">App Router</div></div></div>
+      <div class="card"><div class="ic"><i data-ic="logos:react"></i></div><div><div class="nome">React 19</div><div class="desc">React Flow, Recharts</div></div></div>
+      <div class="card"><div class="ic" style="width:36px;height:36px"><i data-ic="logos:typescript-icon"></i></div><div><div class="nome">TypeScript</div><div class="desc">Axios</div></div></div>
     </div>
     <div style="margin-top:10px">
       <span class="chip">Painel</span><span class="chip">Geração</span><span class="chip">Avaliação</span><span class="chip">Grafo</span><span class="chip">Exportação Obsidian</span><span class="chip">Configuração</span>
@@ -34,7 +34,7 @@
       <div class="card"><div class="ic"><i data-ic="logos:swagger"></i></div><div><div class="nome">OpenAPI</div><div class="desc">documentação em /docs</div></div></div>
     </div>
     <div class="sub">Módulos de domínio (fatias verticais)</div>
-    <div class="linha" id="c-mods">
+    <div class="linha" id="c-mods" style="display:grid;grid-template-columns:repeat(4,1fr)">
       <div class="card mod"><div class="ic"><i data-ic="mdi:sitemap-outline"></i></div><div class="nome">matriz_referencia</div><div class="desc">carga, integridade, contexto</div></div>
       <div class="card mod"><div class="ic"><i data-ic="mdi:robot-outline"></i></div><div class="nome">geracao</div><div class="desc"><i>prompt</i> por condição</div></div>
       <div class="card mod"><div class="ic"><i data-ic="mdi:check-decagram-outline"></i></div><div class="nome">validacao</div><div class="desc">critérios C1–C5</div></div>
@@ -45,8 +45,8 @@
     </div>
     <div class="faixa" id="c-infra"><i data-ic="mdi:shield-lock-outline"></i><b>Infraestrutura</b>&nbsp;driver Neo4j · cliente GLM (tentativas e tempo limite) · autenticação · configuração · validação de segurança</div>
   </div>
-  <div class="banda lote" id="b-lote">
-    <div class="titulo"><i data-ic="mdi:console"></i>Processamento em lote</div>
+  <div class="banda lote dir" id="b-lote">
+    <div class="titulo"><i data-ic="mdi:console"></i>Execução em lote</div>
     <div class="card" style="flex-direction:column;align-items:flex-start;gap:6px" id="c-scripts">
       <div style="display:flex;gap:10px;align-items:center"><div class="ic" style="color:#a16207"><i data-ic="mdi:script-text-outline"></i></div><div class="nome">Scripts Python</div></div>
       <div class="desc" style="font-family:Consolas,monospace;font-size:12.5px;line-height:1.55">executar_experimento<br>executar_avaliacao<br>rejulgar_juiz_distinto<br>analisar_corpus<br>analise_robustez</div>
@@ -56,14 +56,14 @@
 
   <!-- linha 3 -->
   <div class="banda dados" id="b-dados">
-    <div class="titulo"><i data-ic="logos:docker-icon"></i>Camada de dados (Docker)</div>
+    <div class="titulo"><i data-ic="logos:docker-icon"></i>Dados (Docker)</div>
     <div class="linha">
       <div class="card" id="c-neo" style="flex:1.3"><div class="ic" style="width:96px"><i data-ic="logos:neo4j"></i></div><div><div class="nome">Neo4j 5.15</div><div class="desc">Matriz de Referência (195 nós) + 1.788 itens :Questao</div></div></div>
       <div class="card" id="c-pg" style="flex:1"><div class="ic"><i data-ic="logos:postgresql"></i></div><div><div class="nome">PostgreSQL</div><div class="desc">usuários e sessões</div></div></div>
       <div class="card" id="c-redis" style="flex:1"><div class="ic"><i data-ic="logos:redis"></i></div><div><div class="nome">Redis <span style="font-weight:400">(opcional)</span></div><div class="desc">cache, limites, fila</div></div></div>
     </div>
   </div>
-  <div class="banda externo" id="b-glm">
+  <div class="banda externo dir" id="b-glm">
     <div class="titulo"><i data-ic="mdi:cloud-outline"></i>Serviço externo</div>
     <div class="card" id="c-glm"><div class="ic" style="color:#7c3aed"><i data-ic="mdi:brain"></i></div><div><div class="nome">API GLM (Zhipu AI)</div><div class="desc"><b>glm-4.5</b> gerador<br><b>glm-4-plus</b> juiz principal</div></div></div>
   </div>
@@ -71,14 +71,14 @@
 <script>
 window.LIGACOES = [
   { de: "c-pesq", lde: "l", para: "b-apres", lpara: "r", rotulo: "usa", reta: true },
-  { de: "b-apres", lde: "b", para: "b-app", lpara: "t", reta: true, rotulo: "HTTP · REST/JSON" },
-  { de: "c-pesq", lde: "b", para: "b-lote", lpara: "t", dpara: 128, vertical: true, reta: true, rotulo: "executa" },
+  { de: "b-apres", lde: "b", para: "b-app", lpara: "t", dpara: 150, vertical: true, reta: true, rotulo: "HTTP · REST/JSON" },
+  { de: "c-pesq", lde: "b", para: "b-lote", lpara: "t", dpara: -110, vertical: true, reta: true, rotulo: "executa" },
   { de: "c-scripts", lde: "l", para: "c-mods", lpara: "r", rotulo: "reutiliza", tracejado: true },
-  { de: "c-infra", lde: "b", para: "c-neo", lpara: "t", dpara: 110, vertical: true, reta: true, rotulo: "Bolt · Cypher" },
+  { de: "c-infra", lde: "b", para: "c-neo", lpara: "t", dpara: 120, vertical: true, reta: true, rotulo: "Bolt · Cypher" },
   { de: "c-infra", lde: "b", para: "c-pg", lpara: "t", vertical: true, reta: true, rotulo: "asyncpg" },
   { de: "c-infra", lde: "b", para: "c-redis", lpara: "t", vertical: true, reta: true, rotulo: "RESP", tracejado: true },
   { de: "b-app", lde: "r", para: "c-glm", lpara: "l", dde: 150, rotulo: "HTTPS", pos: 0.5 },
-  { de: "b-lote", lde: "b", para: "b-glm", lpara: "t", dpara: 105, vertical: true, reta: true, rotulo: "HTTPS" },
+  { de: "b-lote", lde: "b", para: "b-glm", lpara: "t", dpara: -110, vertical: true, reta: true, rotulo: "HTTPS" },
 ];
 </script>
 <script src="conectar.js"></script>
