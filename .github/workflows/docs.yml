@@ -1,8 +1,7 @@
 name: Deploy docs
 
 on:
-  push:
-    branches: [main]
+  # publicação da documentação herdada do boilerplate: apenas manual
   workflow_dispatch:
 
 permissions:

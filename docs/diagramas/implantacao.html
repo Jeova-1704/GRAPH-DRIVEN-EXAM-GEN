@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Implantação</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  #grade { display: grid; grid-template-columns: 1fr 300px; column-gap: 110px; align-items: start; }
+  #interno { display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 40px; row-gap: 60px; }
+  .proc .desc code, .desc code { font-family: Consolas, monospace; font-size: 12px; background: #f1f5f9; padding: 0 4px; border-radius: 4px; }
+  .porta { margin-left: auto; font-family: Consolas, monospace; font-size: 12.5px; color: #1e3a8a; background: #dbeafe; border-radius: 999px; padding: 2px 9px; align-self: flex-start; }
+  .banda.docker { background: #fff7ed; border-color: #fdba74; grid-column: 1 / span 3; }
+  .banda.docker > .titulo { background: #ea580c; }
+  .vol { font-size: 12px; color: #9a3412; margin-top: 4px; display: flex; gap: 5px; align-items: center; }
+  .vol svg { width: 15px; height: 15px; }
+</style>
+<script src="icons.js"></script></head>
+<body><div id="tela"><svg id="conectores"></svg>
+<div id="grade">
+  <div class="banda maquina" id="b-maq">
+    <div class="titulo"><i data-ic="mdi:laptop"></i>Máquina do pesquisador (Windows 11)</div>
+    <div id="interno">
+      <div class="card" id="c-nav"><div class="ic"><i data-ic="logos:chrome"></i></div><div><div class="nome">Navegador</div><div class="desc">interface web</div></div></div>
+      <div class="card" id="c-fe"><div class="ic"><i data-ic="logos:nextjs-icon"></i></div><div><div class="nome">Frontend</div><div class="desc">Next.js 16 · <code>npm run dev</code></div></div><span class="porta">:3000</span></div>
+      <div></div>
+
+      <div class="card" id="c-be" style="grid-column: 1 / span 2"><div class="ic"><i data-ic="logos:fastapi-icon"></i></div><div><div class="nome">Backend — FastAPI + Uvicorn</div><div class="desc">Python 3.13 · rotas <code>/api/v1/*</code> · documentação em <code>/docs</code></div></div><span class="porta">:8000</span></div>
+      <div class="card" id="c-scr" style="flex-direction:column;align-items:flex-start;gap:6px"><div style="display:flex;gap:10px;align-items:center"><div class="ic" style="color:#a16207"><i data-ic="mdi:script-text-outline"></i></div><div class="nome">Scripts de lote</div></div><div class="desc" style="font-family:Consolas,monospace;font-size:12.5px;line-height:1.5">executar_experimento<br>executar_avaliacao<br>rejulgar_juiz_distinto<br>analisar_corpus</div><div class="desc" style="margin-top:4px">acessam o Neo4j por Bolt e a API GLM por HTTPS</div></div>
+
+      <div class="banda docker" id="b-docker">
+        <div class="titulo"><i data-ic="logos:docker-icon"></i>Contêineres Docker</div>
+        <div class="linha">
+          <div class="card" id="c-neo" style="flex:1.25"><div class="ic" style="width:92px"><i data-ic="logos:neo4j"></i></div><div><div class="nome">Neo4j 5.15</div><div class="desc">Bolt <code>:7687</code> · navegador <code>:7474</code></div><div class="vol"><i data-ic="mdi:harddisk"></i>volume persistente</div></div></div>
+          <div class="card" id="c-pg" style="flex:1"><div class="ic"><i data-ic="logos:postgresql"></i></div><div><div class="nome">PostgreSQL</div><div class="desc">usuários e sessões</div></div></div>
+          <div class="card" id="c-redis" style="flex:1"><div class="ic"><i data-ic="logos:redis"></i></div><div><div class="nome">Redis <span style="font-weight:400">(opcional)</span></div><div class="desc">cache, limites, fila</div></div></div>
+          <div class="card" id="c-dados" style="flex:1;background:#fffbeb"><div class="ic" style="color:#15803d"><i data-ic="mdi:file-excel-outline"></i></div><div><div class="nome">Arquivos</div><div class="desc"><code>data/*.json(l)</code>, <code>.xlsx</code></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banda externo" id="b-nuvem" style="margin-top:150px">
+    <div class="titulo"><i data-ic="mdi:cloud-outline"></i>Nuvem</div>
+    <div class="card" id="c-glm"><div class="ic" style="color:#7c3aed"><i data-ic="mdi:brain"></i></div><div><div class="nome">API GLM (Zhipu AI)</div><div class="desc"><b>glm-4.5</b> gerador<br><b>glm-4-plus</b> juiz principal</div></div></div>
+  </div>
+</div></div>
+<script>
+window.LIGACOES = [
+  { de: "c-nav", lde: "r", para: "c-fe", lpara: "l", reta: true, rotulo: "HTTP" },
+  { de: "c-fe", lde: "b", para: "c-be", lpara: "t", vertical: true, reta: true, rotulo: "REST/JSON (Axios)" },
+  { de: "c-be", lde: "b", para: "c-neo", lpara: "t", dpara: 95, vertical: true, reta: true, rotulo: "Bolt" },
+  { de: "c-be", lde: "b", para: "c-pg", lpara: "t", vertical: true, reta: true, rotulo: "asyncpg" },
+  { de: "c-be", lde: "b", para: "c-redis", lpara: "t", dpara: -90, vertical: true, reta: true, rotulo: "RESP", tracejado: true },
+  { de: "c-scr", lde: "b", para: "c-dados", lpara: "t", vertical: true, reta: true, rotulo: "grava" },
+  { de: "b-maq", lde: "r", para: "c-glm", lpara: "l", dde: -60, rotulo: "HTTPS · SDK zhipuai", reta: true },
+];
+</script>
+<script src="conectar.js"></script>
+</body></html>
