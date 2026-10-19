@@ -1,0 +1,162 @@
+{
+ "descricao": "C(i,h) e E(i,h) com e sem itens de enunciado repetido na mesma celula (habilidade x condicao)",
+ "itens_removidos": 40,
+ "n_boot": 2000,
+ "semente": 42,
+ "corpus_completo": {
+  "n": 1788,
+  "n_por_condicao": {
+   "com_grafo": 597,
+   "com_fewshot_sem_grafo": 594,
+   "sem_grafo": 597
+  },
+  "cobertura_lexical": {
+   "kruskal_wallis": {
+    "H": 30.07346965053874,
+    "p": 2.948689474428887e-07
+   },
+   "pares": {
+    "com_grafo__vs__com_fewshot_sem_grafo": {
+     "p_mann_whitney": 1.1868708818762513e-07,
+     "p_bonferroni": 3.5606126456287537e-07,
+     "cliffs_delta": 0.17587939698492464,
+     "ic95_cluster_bootstrap": [
+      0.12231982851113363,
+      0.2312977241584241
+     ]
+    },
+    "com_grafo__vs__sem_grafo": {
+     "p_mann_whitney": 0.00014059368152057655,
+     "p_bonferroni": 0.0004217810445617296,
+     "cliffs_delta": 0.12650634523819546,
+     "ic95_cluster_bootstrap": [
+      0.07202738160690769,
+      0.18441513633834164
+     ]
+    },
+    "com_fewshot_sem_grafo__vs__sem_grafo": {
+     "p_mann_whitney": 0.11161868062004121,
+     "p_bonferroni": 0.33485604186012363,
+     "cliffs_delta": -0.05275253935220434,
+     "ic95_cluster_bootstrap": [
+      -0.10166697378273377,
+      -0.007336778736307937
+     ]
+    }
+   }
+  },
+  "especificidade_curricular": {
+   "kruskal_wallis": {
+    "H": 33.8464274311619,
+    "p": 4.470351444079384e-08
+   },
+   "pares": {
+    "com_grafo__vs__com_fewshot_sem_grafo": {
+     "p_mann_whitney": 2.3379442278947966e-08,
+     "p_bonferroni": 7.01383268368439e-08,
+     "cliffs_delta": 0.18548973825355736,
+     "ic95_cluster_bootstrap": [
+      0.13361388936732152,
+      0.24360072846849995
+     ]
+    },
+    "com_grafo__vs__sem_grafo": {
+     "p_mann_whitney": 3.439466203007896e-05,
+     "p_bonferroni": 0.00010318398609023688,
+     "cliffs_delta": 0.13763962189506998,
+     "ic95_cluster_bootstrap": [
+      0.08727060435147975,
+      0.19025578059604872
+     ]
+    },
+    "com_fewshot_sem_grafo__vs__sem_grafo": {
+     "p_mann_whitney": 0.12409409497706461,
+     "p_bonferroni": 0.37228228493119386,
+     "cliffs_delta": -0.05099007946579136,
+     "ic95_cluster_bootstrap": [
+      -0.09304889491274497,
+      -0.011792054995132167
+     ]
+    }
+   }
+  }
+ },
+ "sem_duplicatas": {
+  "n": 1748,
+  "n_por_condicao": {
+   "com_grafo": 586,
+   "com_fewshot_sem_grafo": 574,
+   "sem_grafo": 588
+  },
+  "cobertura_lexical": {
+   "kruskal_wallis": {
+    "H": 28.318709911928654,
+    "p": 7.09039247391268e-07
+   },
+   "pares": {
+    "com_grafo__vs__com_fewshot_sem_grafo": {
+     "p_mann_whitney": 2.3628200666122112e-07,
+     "p_bonferroni": 7.088460199836633e-07,
+     "cliffs_delta": 0.17388900120107978,
+     "ic95_cluster_bootstrap": [
+      0.11833507674052529,
+      0.23085233418601017
+     ]
+    },
+    "com_grafo__vs__sem_grafo": {
+     "p_mann_whitney": 0.00034599964531312915,
+     "p_bonferroni": 0.0010379989359393875,
+     "cliffs_delta": 0.11990376355320286,
+     "ic95_cluster_bootstrap": [
+      0.0655957681788816,
+      0.17799821061336643
+     ]
+    },
+    "com_fewshot_sem_grafo__vs__sem_grafo": {
+     "p_mann_whitney": 0.08472032900911373,
+     "p_bonferroni": 0.2541609870273412,
+     "cliffs_delta": -0.057876460688805136,
+     "ic95_cluster_bootstrap": [
+      -0.10896578663467407,
+      -0.011561303661217789
+     ]
+    }
+   }
+  },
+  "especificidade_curricular": {
+   "kruskal_wallis": {
+    "H": 31.801694505559563,
+    "p": 1.2426527364803695e-07
+   },
+   "pares": {
+    "com_grafo__vs__com_fewshot_sem_grafo": {
+     "p_mann_whitney": 5.8206823233422944e-08,
+     "p_bonferroni": 1.7462046970026884e-07,
+     "cliffs_delta": 0.18249872162300365,
+     "ic95_cluster_bootstrap": [
+      0.12819664237633566,
+      0.24233517953677536
+     ]
+    },
+    "com_grafo__vs__sem_grafo": {
+     "p_mann_whitney": 7.456832497417146e-05,
+     "p_bonferroni": 0.00022370497492251438,
+     "cliffs_delta": 0.13273722458266582,
+     "ic95_cluster_bootstrap": [
+      0.08117538680815323,
+      0.18918941507186737
+     ]
+    },
+    "com_fewshot_sem_grafo__vs__sem_grafo": {
+     "p_mann_whitney": 0.10846131698140203,
+     "p_bonferroni": 0.3253839509442061,
+     "cliffs_delta": -0.05388845433643841,
+     "ic95_cluster_bootstrap": [
+      -0.09894827554542322,
+      -0.014047720826894315
+     ]
+    }
+   }
+  }
+ }
+}

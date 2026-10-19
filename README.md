@@ -12,11 +12,13 @@ A plataforma modela a Matriz de Referência do ENEM (4 áreas, 30 competências,
 
 | Arquivo | Conteúdo |
 |---|---|
-| [`backend/data/questoes_geradas.xlsx`](backend/data/questoes_geradas.xlsx) | **Planilha do corpus**: 1.788 itens com enunciado, alternativas, gabarito, métricas $C(i,h)$, $E(i,h)$, TTR e FKGL, e as notas dos dois juízes (`glm-4-plus`, principal, e `glm-4.5`, secundário) |
+| [`backend/data/questoes_geradas.xlsx`](backend/data/questoes_geradas.xlsx) | **Planilha auditável do corpus** (9 abas, com *Leia-me* e dicionário de dados). Para cada um dos 1.788 itens: enunciado, alternativas, gabarito e justificativa; área, competência, habilidade e objetos de conhecimento; cada critério estrutural C1–C5; marcação de enunciado repetido e similaridade com os demais itens da célula; $C(i,h)$ e $E(i,h)$ gravados e recalculados; TTR e FKGL; o juiz principal (`glm-4-plus`: notas D1–D5, justificativa, resposta bruta, *tokens*, data/hora e parâmetros) e o secundário (`glm-4.5`: notas e justificativa); e os *prompts* integrais de geração e do juiz. Outras abas: resumo por condição, médias por habilidade, Matriz, objetos de conhecimento, todos os resultados estatísticos e os *templates* de *prompt* |
 | [`backend/data/questoes_export.json`](backend/data/questoes_export.json) | Corpus completo em JSON, exportado do Neo4j |
 | [`backend/data/julgamento_glm-4-plus.jsonl`](backend/data/julgamento_glm-4-plus.jsonl) | Julgamento do juiz principal: uma linha por item, com notas, justificativa, consumo de *tokens*, horário e resposta bruta |
 | [`backend/data/matriz_referencia.json`](backend/data/matriz_referencia.json) | Matriz de Referência estruturada (fonte da carga do grafo) |
-| [`backend/data/resultado_analise_estatistica.json`](backend/data/resultado_analise_estatistica.json), [`resultado_robustez.json`](backend/data/resultado_robustez.json), [`resultado_juiz_distinto_glm-4-plus.json`](backend/data/resultado_juiz_distinto_glm-4-plus.json), [`conferencia_extracao_matriz.json`](backend/data/conferencia_extracao_matriz.json) | Resultados da análise estatística, da robustez, da comparação entre juízes e da conferência da extração |
+| [`backend/data/resultado_analise_estatistica.json`](backend/data/resultado_analise_estatistica.json), [`resultado_robustez.json`](backend/data/resultado_robustez.json), [`resultado_juiz_distinto_glm-4-plus.json`](backend/data/resultado_juiz_distinto_glm-4-plus.json), [`resultado_robustez_duplicatas.json`](backend/data/resultado_robustez_duplicatas.json), [`conferencia_extracao_matriz.json`](backend/data/conferencia_extracao_matriz.json) | Resultados da análise estatística, da robustez, da comparação entre juízes, do teste sem os 40 itens de enunciado repetido e da conferência da extração |
+
+**O que não está disponível:** as respostas brutas, os *tokens* e os horários da etapa de geração e do juiz secundário não foram preservados; o bloco de exemplos *few-shot* foi enviado vazio; e a similaridade semântica não foi calculada. Os detalhes estão na aba *Leia-me* da planilha.
 
 ## Estrutura
 
@@ -57,6 +59,9 @@ uv run python -m scripts.executar_experimento --limite 2   # piloto com 2 habili
 uv run python -m scripts.executar_avaliacao
 uv run python -m scripts.rejulgar_juiz_distinto --modelo glm-4-plus
 uv run python -m scripts.analisar_corpus
+uv run python -m scripts.analise_robustez
+uv run python -m scripts.analisar_juiz_distinto
+uv run python -m scripts.analise_duplicatas
 uv run --with openpyxl python -m scripts.build_xlsx
 
 # testes (em backend/): 281 de unidade + 47 de integração
