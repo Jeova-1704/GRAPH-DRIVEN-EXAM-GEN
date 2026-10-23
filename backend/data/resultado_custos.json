@@ -1,0 +1,46 @@
+{
+  "precos_cny_por_milhao": {
+    "glm-4.5": {
+      "entrada": 0.8,
+      "saida": 2.0
+    },
+    "glm-4-plus": {
+      "entrada": 5.0,
+      "saida": 5.0
+    }
+  },
+  "chars_por_token": {
+    "entrada": 3.568,
+    "saida": 3.631
+  },
+  "etapas": {
+    "geracao_glm-4.5": {
+      "exato": false,
+      "entrada": 470041,
+      "saida_visivel": 822896,
+      "chamadas": 1788,
+      "custo_cny": 2.02,
+      "cenario_raciocinio_tokens": 4470000,
+      "cenario_raciocinio_custo_cny": 10.96
+    },
+    "juiz_secundario_glm-4.5": {
+      "exato": false,
+      "entrada": 1246317,
+      "saida_visivel": 381436,
+      "chamadas": 1787,
+      "custo_cny": 1.76,
+      "cenario_raciocinio_tokens": 4467500,
+      "cenario_raciocinio_custo_cny": 10.69
+    },
+    "juiz_principal_glm-4-plus": {
+      "exato": true,
+      "entrada": 1263011,
+      "saida_visivel": 555188,
+      "chamadas": 1788,
+      "custo_cny": 9.09
+    }
+  },
+  "total_tokens_minimo": 4738889,
+  "total_custo_cny_minimo": 12.87,
+  "total_custo_cny_cenario_raciocinio": 30.74
+}
